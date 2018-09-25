@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <head>
         <title>Ma page</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style1.css">
+        <link href="<?php echo base_url()."css/style.css" ?>">
 
     </head>
     <body>
@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div>
             <!-- La vue s'affichera ici -->
             <?php echo $page;
-            var_dump(base_url()); ?>
+            echo base_url()."css/style.css" ?>
         </div>
 
         <footer>Ceci est le footer</footer>
