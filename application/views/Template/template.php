@@ -35,8 +35,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </li>
           </ul>
           <div>
-          <a href="#myModal2" class="btn btn-outline-info" data-toggle="modal">S'inscrire</a>
-          <a href="#myModal" class="btn btn-outline-success" data-toggle="modal">Se connecter</a>
+          <?php echo $navbar ?>
           </div>
         </div>
       </nav>
@@ -44,77 +43,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <div>
 
+<?php if(isset($formulaire)){
+	echo $formulaire;
+} 
+?>
     <!-- LA VUE DYNAMIQUE COMMENCE ICI -->
-
-<div id="myModal" class="modal fade">
-	<div class="modal-dialog modal-login">
-		<div class="modal-content">
-			<div class="modal-header">		
-				<h4 class="modal-title">Connection</h4>	
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			</div>
-			<div class="modal-body">
-			<?php echo form_open('Test/connection');?>
-					<div class="form-group">
-					<?php echo form_error('username','<span class="error">','</span>');?>
-						<input type="text" class="form-control" name="username" placeholder="Nom d'utilisateur" value="<?php echo set_value('username');?>" required="required">		
-					</div>
-					<div class="form-group">
-					<?php echo form_error('password','<span class="error">','</span>');?>
-						<input type="password" class="form-control" name="password" placeholder="Mot de passe" value="<?php echo set_value('username');?>" required="required">	
-					</div>        
-					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Se connecter</button>
-					</div>
-			<?php echo form_close();?>
-			</div>
-			<div class="modal-footer">
-				<a href="#">Mot de passe oublié ?</a>
-			</div>
-		</div>
-	</div>
-</div>   
-
-	<!-- Bouton Inscription HTML Pop Up Modal -->
-    </div>
-	
-<div id="myModal2" class="modal fade">
-	<div class="modal-dialog modal-login">
-		<div class="modal-content">
-			<div class="modal-header">		
-				<h4 class="modal-title">Inscription</h4>	
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			</div>
-			<div class="modal-body">
-			<?php echo form_open('Test/inscription');?>
-                    <div class="form-group">
-					<?php echo form_error('nom','<span class="error">','</span>');?>
-						<input type="text" class="form-control" name="nom" placeholder="Nom" value="<?php echo set_value('nom');?>" required>	
-                    </div>   
-                    <div class="form-group">
-					<?php echo form_error('prenom','<span class="error">','</span>');?>
-						<input type="text" class="form-control" name="prenom" placeholder="Prénom" value="<?php echo set_value('prenom');?>" required>	
-                    </div> 
-                    <div class="form-group">
-					<?php echo form_error('email','<span class="error">','</span>');?>
-						<input type="email" class="form-control" name="email" placeholder="Email" value="<?php echo set_value('email');?>" required>	
-					</div>  
-					<div class="form-group">
-					<?php echo form_error('username','<span class="error">','</span>');?>
-						<input type="text" class="form-control" name="username" placeholder="Nom d'utilisateur" value="<?php echo set_value('username');?>" required>		
-					</div>
-					<div class="form-group">
-					<?php echo form_error('password','<span class="error">','</span>');?>
-						<input type="password" class="form-control" name="password" placeholder="Mot de passe" value="<?php echo set_value('password');?>" required>	
-					</div>        
-					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-lg btn-block login-btn">S'inscrire</button>
-					</div>
-			<?php echo form_close();?>
-			</div>
-		</div>
-	</div>
-</div>   
 
     <!-- La vue s'affichera ici -->
     <?php echo $page; ?>
@@ -138,8 +71,13 @@ NextDrop © 2018
     <!-- Bootstrap JS-->
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/custom/js/script.js"></script>
-	<?php if($register_script == true){
+	<?php 
+	if(isset($register_script)){
 		echo "<script>$('#myModal2').modal('show');</script>";
-	} ?>
+	}
+	else if(isset($login_script)){
+		echo "<script>$('#myModal').modal('show');</script>";
+	}
+	 ?>
 </body>
 </html>
