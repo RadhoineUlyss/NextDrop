@@ -32,7 +32,7 @@ class Profil extends CI_Controller
         $this->dynamic_navbar->verification($page);
         }
         else{
-            $this->session->set_flashdata('error_ident', 'Accès disponible uniquement aux membres');
+           
             redirect($this->session->flashdata('current_url'));
         }
         

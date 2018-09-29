@@ -17,6 +17,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body>
 
  <header>
+ <!-- LA BARRE DE NAVIGATION DEBUT -->
  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="<?php echo base_url('') ?>">NextDrop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,10 +36,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </li>
           </ul>
           <div>
-          <?php echo $navbar ?>
+          <?php echo $navbar ?>  <!-- $navbar correspond aux boutons présents à droite de la barre (ex : Se connecter ) -->
           </div>
         </div>
       </nav>
+<!-- LA BARRE DE NAVIGATION FIN -->
  </header>
 
 <div>
