@@ -24,11 +24,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Accueil</a>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url('') ?>">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Page 1</a>
+              <a class="nav-link" href="<?php echo base_url('/galerie') ?>">Galerie</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Page 2</a>
@@ -42,15 +42,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
  </header>
 
 <div>
-
-<?php if(isset($formulaire)){
-	echo $formulaire;
-} 
+<?php if ($this->session->flashdata('message')) {
+    echo '<div class="alert alert-success" id="success-alert">
+  <button type="button" class="close" data-dismiss="alert">x</button>
+  <strong>' . $this->session->flashdata('message') . '</strong>
+</div>';
+}?>
+<?php if (isset($formulaire)) {
+    echo $formulaire;
+}
 ?>
     <!-- LA VUE DYNAMIQUE COMMENCE ICI -->
+    <div class="container"><?php echo $page; ?></div>
 
-    <!-- La vue s'affichera ici -->
-    <?php echo $page; ?>
 </div>
 
 <footer class="footer">
@@ -58,7 +62,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <div class="prem_footer">
         <p>Ceci est le footer.</p>
         <p>Page rendered in <strong>{elapsed_time}</strong> seconds.</p>
-<a href="<?php echo base_url('test/') ?>"> Vous pouves cliquer ici pour revenir a l'accueil</a>
+<a href="<?php echo base_url('') ?>"> Vous pouvez cliquer ici pour revenir à l'accueil</a>
 </div>
 <div class="sec_footer">
 NextDrop © 2018
@@ -71,13 +75,13 @@ NextDrop © 2018
     <!-- Bootstrap JS-->
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/custom/js/script.js"></script>
-	<?php 
-	if(isset($register_script)){
-		echo "<script>$('#myModal2').modal('show');</script>";
-	}
-	else if(isset($login_script)){
-		echo "<script>$('#myModal').modal('show');</script>";
-	}
-	 ?>
+	<?php
+if ($this->session->flashdata('error_ins')) {
+    echo "<script>$('#myModal2').modal('show');</script>";
+}
+else if ($this->session->flashdata('error_ident')) {
+    echo "<script>$('#myModal').modal('show');</script>";
+}
+?>
 </body>
 </html>
