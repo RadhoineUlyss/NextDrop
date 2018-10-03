@@ -24,9 +24,9 @@ echo "<tr><th scope=\"row\">Nom : </th><td>" . $nom . "</td><td><button type=\"b
 ?>
   </table>
 
-  <button class='btn btn-lg ' style='background-color:transparent;'>
-   <i class="fa fa-pencil"></i> Edit
-</button>
+<?php if($this->session->userdata('superadmin')){
+    echo '<h4 style="color:red;">Vous avez un compte administrateur</h4>';
+} ?>
 
 <?php  //TEMPLATE TEXTE POUR LA MODIFICATION NE PAS DELETE
 /*
