@@ -52,6 +52,7 @@ class Test extends CI_Controller
                 'email' => $this->input->post('email'),
                 'username' => $this->input->post('username'),
                 'password' => sha1($this->input->post('password')),
+                'date_inscription' => date("Y-m-d")
             );
             $this->inscription_model->signup($data);
             $this->session->set_flashdata('message', 'Inscription réussie');
@@ -86,6 +87,7 @@ class Test extends CI_Controller
     {
         $this->session->unset_userdata('login');
         $this->session->unset_userdata('logged');
+        $this->session->unset_userdata('superadmin');
         $this->session->sess_destroy();
         redirect('/');
     }

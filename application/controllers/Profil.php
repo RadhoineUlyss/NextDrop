@@ -25,17 +25,23 @@ class Profil extends CI_Controller
         // On stocke notre page dans la variable $page
         //$page = $this->load->view('accueil_view', '', true);
         // On affiche notre page avec le template
-        
+
         if ($this->session->userdata('login') || $this->session->userdata('logged')) {
-        $this->session->set_flashdata('current_url', current_url());
-        $page = $this->load->view('profil_view', '', true);
-        $this->dynamic_navbar->verification($page);
-        }
-        else{
-           
+            $this->session->set_flashdata('current_url', current_url());
+            $data = $this->getData();
+            if($data->superadmin){
+                $this->session->set_userdata('superadmin',$data->superadmin);
+            }
+            $page = $this->load->view('profil_view', $data, true);
+            $this->dynamic_navbar->verification($page);
+        } else {
             redirect($this->session->flashdata('current_url'));
         }
-        
-       
+    }
+
+    private function getData()
+    {
+        $this->load->model('connection_model');
+        return $this->connection_model->getData($this->session->userdata('login'));
     }
 }

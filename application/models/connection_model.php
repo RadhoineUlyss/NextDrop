@@ -1,18 +1,25 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
 class connection_model extends CI_Model
 {
-  function check_id($pseudo,$pass)
-  {
-    $this->db->where('username',$pseudo);
-    $this->db->where('password',sha1($pass));
-    $q = $this->db->get('membres');
-    if($q->num_rows()>0)
+    public function check_id($pseudo, $pass)
     {
-      return true;
+        $this->db->where('username', $pseudo);
+        $this->db->where('password', sha1($pass));
+        $q = $this->db->get('membres');
+        if ($q->num_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
-    else{
-      return false;
+    public function getData($username)
+    {
+        $this->db->where('username', $username);
+        $query = $this->db->get('membres');
+        $data = $query->first_row();
+        return $data ;
     }
-  }
 }
