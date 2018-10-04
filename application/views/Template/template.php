@@ -76,7 +76,11 @@ NextDrop © 2018
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap JS-->
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/custom/js/script.js"></script>
+    <?php if($script != ''){
+    echo "<script src=\"".base_url()."assets/custom/js/".$script.".js\"></script>";
+    }
+    ?>
+
 	<?php
 if ($this->session->flashdata('error_ins')) {
     echo "<script>$('#myModal2').modal('show');</script>";

@@ -29,11 +29,11 @@ class Profil extends CI_Controller
         if ($this->session->userdata('login') || $this->session->userdata('logged')) {
             $this->session->set_flashdata('current_url', current_url());
             $data = $this->getData();
-            if($data->superadmin){
-                $this->session->set_userdata('superadmin',$data->superadmin);
+            if ($data->superadmin) {
+                $this->session->set_userdata('superadmin', $data->superadmin);
             }
             $page = $this->load->view('profil_view', $data, true);
-            $this->dynamic_navbar->verification($page);
+            $this->dynamic_navbar->verification($page , 'profil_script');
         } else {
             redirect($this->session->flashdata('current_url'));
         }
@@ -44,4 +44,25 @@ class Profil extends CI_Controller
         $this->load->model('connection_model');
         return $this->connection_model->getData($this->session->userdata('login'));
     }
+
+    private function setButtons()
+    {
+        $data['donnees'] = array(
+            'email' => "<a href=\"" . base_url('profil/modifier/email') . "\" class=\"btn btn-outline-dark\">Modifier</a>",
+            'nom' => "<a href=\"" . base_url('profil/modifier/nom') . "\" class=\"btn btn-outline-dark\">Modifier</a>",
+            'prenom' => "<a href=\"" . base_url('profil/modifier/prenom') . "\" class=\"btn btn-outline-dark\">Modifier</a>",
+            'adresse' => "<a href=\"" . base_url('profil/modifier/adresse') . "\" class=\"btn btn-outline-dark\">Modifier</a>",
+        );
+    }
+
+    public function modifier($donnee){
+        $this->load->model('connection_model');
+        $data = array(
+            $donnee => $this->input->post($donnee)
+        );
+        $this->connection_model->modify($this->session->userdata('login'), $data);
+        $this->session->set_flashdata('message', 'Modifications réalisées');
+        redirect($this->session->flashdata('current_url'));
+    }
+
 }
