@@ -23,7 +23,9 @@ html {
     }
     #social{
         text-align: center;
-        text-decoration: none;
+    }
+    #social a{
+        text-decoration: none !important;
     }
 /*  Footer - Close  */
 
