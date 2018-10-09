@@ -23,7 +23,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+if (isset($_SERVER['SERVER_NAME'])) {
+    $url = 'http://' . $_SERVER['SERVER_NAME'] . '/';
+} else {
+    if (isset($_SERVER['HTTP_HOST'])) {
+        $url = 'http://' . $_SERVER['HTTP_HOST'] . '/';
+    } else {
+        $url = 'https://www.nexdrop.local/';
+    }
+}
+$config['base_url'] = $url;
 
 /*
 |--------------------------------------------------------------------------
