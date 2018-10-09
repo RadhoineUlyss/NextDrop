@@ -21,6 +21,10 @@ html {
     background-color: #cccccc;
   }
 
+  #social{
+    text-align: center;
+    }
+
   .modal-login {		
     color: #636363;
     width: 350px;
