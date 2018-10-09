@@ -23,17 +23,11 @@ html {
     }
     #social{
         text-align: center;
+        text-decoration: none;
     }
 /*  Footer - Close  */
 
-<<<<<<< HEAD
 /*  Modal - Open    */
-=======
-  #social{
-    text-align: center;
-    }
-
->>>>>>> Lorenzo
   .modal-login {		
     color: #636363;
     width: 350px;
