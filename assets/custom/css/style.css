@@ -5,29 +5,26 @@ html {
   body {
     margin-bottom: 200px; /* Margin bottom by footer height */
   }
+  .footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto; /* Set the fixed height of the footer here */
 
-/*  Footer - Open   */
-    .footer {
-        text-align: center;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: auto; /* Set the fixed height of the footer here */
-    }
-    .prem_footer{
-        background-color: #e2e2e2;
-        padding-bottom: 20px;
-    }
-    .sec_footer{
-        background-color: #cccccc;
-    }
-    #social{
-        text-align: center;
-        text-decoration: none;
-    }
-/*  Footer - Close  */
+  }
+  .prem_footer{
+    background-color: #e2e2e2;
+    padding-bottom: 20px;
+  }
+  .sec_footer{
+    background-color: #cccccc;
+  }
 
-/*  Modal - Open    */
+  #social{
+    text-align: center;
+    }
+
   .modal-login {		
     color: #636363;
     width: 350px;
@@ -87,4 +84,3 @@ html {
     background: #45aba6;
     outline: none;
 }
-/*  Modal - Close   */
