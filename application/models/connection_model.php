@@ -23,10 +23,9 @@ class connection_model extends CI_Model
         return $data ;
     }
 
-    function modify($id, $nom)
+    function modify($id, $data)
   {
-      $this->db->set('nom',$nom);
     $this->db->where('username',$id);
-    $this->db->update('membres');
+    $this->db->update('membres',$data);
   }
 }

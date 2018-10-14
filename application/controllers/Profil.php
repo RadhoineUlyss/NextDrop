@@ -45,12 +45,24 @@ class Profil extends CI_Controller
         return $this->connection_model->getData($this->session->userdata('login'));
     }
 
-    public function modifier(){
+    private function setButtons()
+    {
+        $data['donnees'] = array(
+            'email' => "<a href=\"" . base_url('profil/modifier/email') . "\" class=\"btn btn-outline-dark\">Modifier</a>",
+            'nom' => "<a href=\"" . base_url('profil/modifier/nom') . "\" class=\"btn btn-outline-dark\">Modifier</a>",
+            'prenom' => "<a href=\"" . base_url('profil/modifier/prenom') . "\" class=\"btn btn-outline-dark\">Modifier</a>",
+            'adresse' => "<a href=\"" . base_url('profil/modifier/adresse') . "\" class=\"btn btn-outline-dark\">Modifier</a>",
+        );
+    }
+
+    public function modifier($donnee){
         $this->load->model('connection_model');
-        $nom = $this->input->post('nom');
-        $this->connection_model->modify($this->session->userdata('login'),$nom);
+        $data = array(
+            $donnee => $this->input->post($donnee)
+        );
+        $this->connection_model->modify($this->session->userdata('login'), $data);
         $this->session->set_flashdata('message', 'Modifications réalisées');
-        echo "<script>console.log( 'Debug Objects: test' );</script>";
+        redirect($this->session->flashdata('current_url'));
     }
 
 }

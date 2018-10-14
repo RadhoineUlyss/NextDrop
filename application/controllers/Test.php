@@ -32,29 +32,8 @@ class Test extends CI_Controller
     public function inscription()
     {
 
-       /* $this->load->model('inscription_model');
-        $config = array(
-            array(
-                'field' => 'emailaddress',
-                'label' => 'EmailAddress',
-                'rules' => 'required|valid_email',
-            ),
-            array(
-                'field' => 'name',
-                'label' => 'Name',
-                'rules' => 'required|alpha',
-            ),
-            array(
-                'field' => 'title',
-                'label' => 'Title',
-                'rules' => 'required',
-            ),
-            array(
-                'field' => 'message',
-                'label' => 'MessageBody',
-                'rules' => 'required',
-            ),
-        );*/
+        $this->load->model('inscription_model');
+
         $this->form_validation->set_message('email_exists', 'L\'email est déjà utilisé');
         $this->form_validation->set_message('username_exists', 'Le nom d\'utilisateur est déjà utilisé');
         $this->form_validation->set_message('valid_email', 'L\'adresse email doit être valide');
@@ -73,12 +52,12 @@ class Test extends CI_Controller
                 'email' => $this->input->post('email'),
                 'username' => $this->input->post('username'),
                 'password' => sha1($this->input->post('password')),
-                'date_inscription' => date("Y-m-d"),
+                'date_inscription' => date("Y-m-d")
             );
             $this->inscription_model->signup($data);
             $this->session->set_flashdata('message', 'Inscription réussie');
         } else {
-            $this->session->set_flashdata('error_ins', '<strong>Erreur d\'inscription : </strong>' . form_error('email') . form_error('password') . form_error('username'));
+            $this->session->set_flashdata('error_ins', '<strong>Erreur d\'inscription : </strong>'.form_error('email').form_error('password').form_error('username'));
         }
         redirect($this->session->flashdata('current_url'));
         //$this->dynamic_navbar->verification(); sauvegarde le cache formulaire
