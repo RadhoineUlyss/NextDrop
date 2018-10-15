@@ -22,6 +22,7 @@ $('td > .btn').click(function () {
 
 
     $('#validate').click(function () {
+        //test
         var nom = $('#nom').val();
         $.ajax({
             url: location.origin + "/profil/modifier", // La ressource ciblée
