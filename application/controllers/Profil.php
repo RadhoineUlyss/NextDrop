@@ -42,6 +42,7 @@ class Profil extends CI_Controller
     private function getData()
     {
         $this->load->model('connection_model');
+
         return $this->connection_model->getData($this->session->userdata('login'));
     }
 
@@ -52,29 +53,29 @@ class Profil extends CI_Controller
         // $this->connection_model->modify($this->session->userdata('login'),$nom);
         //  $this->session->set_flashdata('message', 'Modifications réalisées');
         //  echo "<script>console.log( 'Debug Objects: test' );</script>";
-       // $this->form_validation->set_message('required', 'Le {field} est déjà utilisé');
+        // $this->form_validation->set_message('required', 'Le {field} est déjà utilisé');
 
 
-       // if ($this->form_validation->run()) {
-            $data = $this->input->post();
+        // if ($this->form_validation->run()) {
+        $data = $this->input->post();
 
-            $this->connection_model->modify($this->session->userdata('login'), $data);
-            $json = array(
-                'status' => 'succes',
-                'var'=> current($data),
-                //  'redirect_url' => $this->load->view('accueil_view', '', true),
-            );
+        $this->connection_model->modify($this->session->userdata('login'), $data);
+        $json = array(
+            'status' => 'succes',
+            'var'    => current($data),
+            //  'redirect_url' => $this->load->view('accueil_view', '', true),
+        );
 
-      //  } else {
+        //  } else {
         //    $json = validation_errors();
-            
-            /* $json = array(
-        'nom' => form_error('nom'),
-        'prenom' => form_error('prenom'),
-        'ville' => form_error('ville'),
-        );*/
 
-    //    }
+        /* $json = array(
+    'nom' => form_error('nom'),
+    'prenom' => form_error('prenom'),
+    'ville' => form_error('ville'),
+    );*/
+
+        //    }
         header("Content-type:application/json");
         echo json_encode($json);
     }
