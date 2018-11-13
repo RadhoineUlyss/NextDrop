@@ -5,7 +5,7 @@
 class Dynamic_navbar
 {
 
-    public function verification($page = '', $script = '')
+    public function verification($page = '', $script='', $style='')
     {
 
         $view_data = [];
@@ -19,17 +19,19 @@ class Dynamic_navbar
             $data       = [
                 'page'   => $page,
                 'navbar' => $navbar,
-                'script' => $script
+                'script' => $script,
+                'style' => $style
             ];
             $data_merge = array_merge($data, $view_data);
             $CI->load->view('Template/template', $data_merge);
         } else {
             $navbar     = $CI->load->view('Template/signin_button_inc_view', '', true); /* $navbar correspond aux boutons présents à droite de la navbar */
             $formulaire = $CI->load->view('Template/signin_modal_inc_view', '', true);
-            $data       = [
-                'page'       => $page,
-                'navbar'     => $navbar,
-                'script'     => $script,
+            $data = [
+                'page' => $page,
+                'navbar' => $navbar,
+                'script' => $script,
+                'style' => $style,
                 'formulaire' => $formulaire
             ];
             $data_merge = array_merge($data, $view_data);

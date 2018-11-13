@@ -69,20 +69,43 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
 
 	$(document).ready(function (e) {
 		var email = $("#info_compte :input[name='email']").val();
+
 		$('#info_compte').on('input change', function () {
 
-			if (($("#info_compte :input[name='email']").val() != email)) {
+			if ($("#info_compte :input[name='email']").val() != email) {
 				console.log(email + " " + $("#info_compte :input[name='email']").val());
 				$('#acc_cte').attr('disabled', false);
 			}
 			else {
-				$('#acc_cte').attr('disabled', false);
+				$('#acc_cte').attr('disabled', true);
 			}
 		});
 
 		var nom    = $("#info_pers :input[name='nom']").val();
 		var prenom = $("#info_pers :input[name='prenom']").val();
-        /*	$('#info_pers').on('input change', function() {
+
+		$("#info_pers").on('input change', function () {
+			if ($("#info_pers :input[name='nom']").val() != nom || $("#info_pers :input[name='prenom']").val() != prenom) {
+				$('#acc_pers').attr('disabled', false);
+			}
+			else {
+				$('#acc_pers').attr('disabled', true);
+			}
+		});
+        /*$('#info_pers').on('input change', function() {
+
+         if (($("#info_compte :input[name='email']").val() != email)) {
+         console.log(email + " " + $("#info_compte :input[name='email']").val());
+         $('#acc_cte').attr('disabled', false);
+         }
+         else {
+         $('#acc_cte').attr('disabled', false);
+         }
+         });
+
+         var nom    = $("#info_pers :input[name='nom']").val();
+         var prenom = $("#info_pers :input[name='prenom']").val();
+         /*	$('#info_pers').on('input change', function() {
 
          if(($("#info_compte :input[name='email']").val() != email)){
          console.log(email + " " + $("#info_compte :input[name='email']").val());

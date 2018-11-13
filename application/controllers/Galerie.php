@@ -32,7 +32,7 @@ class Galerie extends CI_Controller
         } else {
             $bouton = "<a href=\"#myModal\" class=\"btn btn-outline-info\" data-toggle=\"modal\">Action que seuls les membres peuvent faire</a>";
         }
-        $page = $this->load->view('galerie_view', ['bouton_membre' => $bouton], true);
-        $this->dynamic_navbar->verification($page);
+        $page = $this->load->view('galerie_view', ['bouton_membre' => $bouton ], true);
+        $this->dynamic_navbar->verification($page,'','');
     }
 }

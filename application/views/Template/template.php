@@ -12,6 +12,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <!-- Bootstrap CSS-->
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/custom/css/style.css">
+    <?php if ($style != '') {
+    echo "<link rel=\"stylesheet\" href=".base_url()."assets/custom/css/".$style.".css>";
+    }?>
+    
 </head>
 <!-- NE PAS TOUCHER EN HAUT -->
 <body>
