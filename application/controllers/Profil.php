@@ -31,11 +31,10 @@ class Profil extends CI_Controller
             $this->session->set_flashdata('current_url', current_url());
             $user = $this->getData();
             if ($user->superadmin) {
+                $data               = $this->session->userdata('login_User');
                 $data['superadmin'] = $user->superadmin;
                 $this->session->set_userdata('login_User', $data);
             }
-            var_dump($this->session->userdata(), $this->isAdmin());
-            die();
             $page = $this->load->view('profil_view', $user, true);
             $this->dynamic_navbar->verification($page, 'profil_script');
         } else {

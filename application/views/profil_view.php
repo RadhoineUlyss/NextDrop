@@ -1,9 +1,10 @@
 <?php
 /**
+ *
  * @var string   $username
  * @var string   $email
- * @var DateTime $date_inscription
  * @var          $this CI_Loader
+ *
  */
 ?>
 <h1> Page Profil </h1>

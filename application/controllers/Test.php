@@ -93,7 +93,12 @@ class Test extends CI_Controller
 
         if ($this->form_validation->run()) {
             if ($this->connection_model->check_id($this->input->post('username'), $this->input->post('password'))) {
-                $data = ['login' => $this->input->post('username'), 'logged' => true];
+
+                $data = [
+                    'login'  => $this->input->post('username'),
+                    'logged' => true
+                ];
+
                 $this->session->set_userdata('login_User', $data);
                 $this->session->set_flashdata('message', 'Connexion réussie. Bonjour ' . $this->input->post('username') . ' !');
             } else {
@@ -106,9 +111,7 @@ class Test extends CI_Controller
 
     public function logout()
     {
-        $this->session->unset_userdata('login');
-        $this->session->unset_userdata('logged');
-        $this->session->unset_userdata('superadmin');
+        $this->session->unset_userdata('login_User');
         $this->session->sess_destroy();
         redirect('/');
     }

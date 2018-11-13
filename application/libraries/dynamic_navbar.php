@@ -14,7 +14,7 @@ class Dynamic_navbar
             $page = $CI->load->view('accueil_view', '', true);
         }
 
-        if ($CI->session->userdata('login') || $CI->session->userdata('logged')) {
+        if ($CI->session->userdata('login_User')) {
             $navbar     = $CI->load->view('Template/logged_button_inc_view', '', true);
             $data       = [
                 'page'   => $page,
