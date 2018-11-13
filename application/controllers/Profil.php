@@ -46,36 +46,56 @@ class Profil extends CI_Controller
         return $this->connection_model->getData($this->session->userdata('login'));
     }
 
-    public function modifier()
+    public function modifierCompte()
     {
         $this->load->model('connection_model');
-        //  $nom = $this->input->post('nom');
-        // $this->connection_model->modify($this->session->userdata('login'),$nom);
-        //  $this->session->set_flashdata('message', 'Modifications réalisées');
-        //  echo "<script>console.log( 'Debug Objects: test' );</script>";
-        // $this->form_validation->set_message('required', 'Le {field} est déjà utilisé');
+    
+        $this->form_validation->set_message('is_unique', 'L\'email est déjà utilisé');
+        $this->form_validation->set_message('valid_email', 'L\'adresse email doit être valide');
 
+        $this->form_validation->set_rules('email', 'Email', 'trim|valid_email|is_unique[membres.email]|required');
 
-        // if ($this->form_validation->run()) {
+        if ($this->form_validation->run()) {
         $data = $this->input->post();
-
+          
         $this->connection_model->modify($this->session->userdata('login'), $data);
         $json = array(
-            'status' => 'succes',
-            'var'    => current($data),
-            //  'redirect_url' => $this->load->view('accueil_view', '', true),
+            'status' => 'succes'
         );
+        }
+        else{
+            $json = array(
+                'erreur' => validation_errors()
+            );
+        }
 
-        //  } else {
-        //    $json = validation_errors();
+        header("Content-type:application/json");
+        echo json_encode($json);
+    }
 
-        /* $json = array(
-    'nom' => form_error('nom'),
-    'prenom' => form_error('prenom'),
-    'ville' => form_error('ville'),
-    );*/
+    public function modifierPerso()
+    {
+        $this->load->model('connection_model');
+    
+        $this->form_validation->set_message('min_length', 'Minimum 5 caractères pour le %s');
 
-        //    }
+        $this->form_validation->set_rules('prenom', 'Prénom', 'trim|required');
+        $this->form_validation->set_rules('nom', 'Nom', 'trim|required');
+
+        if ($this->form_validation->run()) {
+        $data = $this->input->post();
+          
+        $this->connection_model->modify($this->session->userdata('login'), $data);
+        $json = array(
+            'status' => 'succes'
+        );
+        }
+        else{
+            $json = array(
+                'erreur' => validation_errors()
+            );
+        }
+
         header("Content-type:application/json");
         echo json_encode($json);
     }
