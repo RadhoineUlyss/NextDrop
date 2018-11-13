@@ -27,12 +27,12 @@ class Galerie extends CI_Controller
         // On affiche notre page avec le template
         $this->session->set_flashdata('current_url', current_url());
 
-        if ($this->session->userdata('login') || $this->session->userdata('logged')) {
-            $bouton = "<a href=\"".base_url('/profil')."\" class=\"btn btn-outline-info\">Action que seuls les membres peuvent faire</a>";
+        if ($this->session->userdata('login_User')) {
+            $bouton = "<a href=\"" . base_url('/profil') . "\" class=\"btn btn-outline-info\">Action que seuls les membres peuvent faire</a>";
         } else {
             $bouton = "<a href=\"#myModal\" class=\"btn btn-outline-info\" data-toggle=\"modal\">Action que seuls les membres peuvent faire</a>";
         }
-        $page = $this->load->view('galerie_view', ['bouton_membre' => $bouton ], true);
+        $page = $this->load->view('galerie_view', ['bouton_membre' => $bouton], true);
         $this->dynamic_navbar->verification($page);
     }
 }

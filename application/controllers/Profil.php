@@ -27,12 +27,15 @@ class Profil extends CI_Controller
         //$page = $this->load->view('accueil_view', '', true);
         // On affiche notre page avec le template
 
-        if ($this->session->userdata('login') || $this->session->userdata('logged')) {
+        if ($this->session->userdata('login_User')) {
             $this->session->set_flashdata('current_url', current_url());
             $user = $this->getData();
             if ($user->superadmin) {
-                $this->session->set_userdata('superadmin', $user->superadmin);
+                $data['superadmin'] = $user->superadmin;
+                $this->session->set_userdata('login_User', $data);
             }
+            var_dump($this->session->userdata(), $this->isAdmin());
+            die();
             $page = $this->load->view('profil_view', $user, true);
             $this->dynamic_navbar->verification($page, 'profil_script');
         } else {
@@ -44,7 +47,7 @@ class Profil extends CI_Controller
     {
         $this->load->model('connection_model');
 
-        return $this->connection_model->getData($this->session->userdata('login'));
+        return $this->connection_model->getData($this->session->userdata('login_User')['login']);
     }
 
     public function modifierCompte()
@@ -59,7 +62,7 @@ class Profil extends CI_Controller
         if ($this->form_validation->run()) {
             $data = $this->input->post();
 
-            $this->connection_model->modify($this->session->userdata('login'), $data);
+            $this->connection_model->modify($this->session->userdata('login_User')['login'], $data);
             $json = [
                 'status' => 'succes'
             ];
@@ -85,7 +88,7 @@ class Profil extends CI_Controller
         if ($this->form_validation->run()) {
             $data = $this->input->post();
 
-            $this->connection_model->modify($this->session->userdata('login'), $data);
+            $this->connection_model->modify($this->session->userdata('login_User')['login'], $data);
             $json = [
                 'status' => 'succes'
             ];

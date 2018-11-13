@@ -32,29 +32,29 @@ class Test extends CI_Controller
     public function inscription()
     {
 
-       /* $this->load->model('inscription_model');
-        $config = array(
-            array(
-                'field' => 'emailaddress',
-                'label' => 'EmailAddress',
-                'rules' => 'required|valid_email',
-            ),
-            array(
-                'field' => 'name',
-                'label' => 'Name',
-                'rules' => 'required|alpha',
-            ),
-            array(
-                'field' => 'title',
-                'label' => 'Title',
-                'rules' => 'required',
-            ),
-            array(
-                'field' => 'message',
-                'label' => 'MessageBody',
-                'rules' => 'required',
-            ),
-        );*/
+        /* $this->load->model('inscription_model');
+         $config = array(
+             array(
+                 'field' => 'emailaddress',
+                 'label' => 'EmailAddress',
+                 'rules' => 'required|valid_email',
+             ),
+             array(
+                 'field' => 'name',
+                 'label' => 'Name',
+                 'rules' => 'required|alpha',
+             ),
+             array(
+                 'field' => 'title',
+                 'label' => 'Title',
+                 'rules' => 'required',
+             ),
+             array(
+                 'field' => 'message',
+                 'label' => 'MessageBody',
+                 'rules' => 'required',
+             ),
+         );*/
         $this->form_validation->set_message('email_exists', 'L\'email est déjà utilisé');
         $this->form_validation->set_message('username_exists', 'Le nom d\'utilisateur est déjà utilisé');
         $this->form_validation->set_message('valid_email', 'L\'adresse email doit être valide');
@@ -67,14 +67,14 @@ class Test extends CI_Controller
         $this->form_validation->set_rules('password', 'Mot de passe', 'trim|required|min_length[5]');
 
         if ($this->form_validation->run()) {
-            $data = array(
-                'nom' => $this->input->post('nom'),
-                'prenom' => $this->input->post('prenom'),
-                'email' => $this->input->post('email'),
-                'username' => $this->input->post('username'),
-                'password' => sha1($this->input->post('password')),
+            $data = [
+                'nom'              => $this->input->post('nom'),
+                'prenom'           => $this->input->post('prenom'),
+                'email'            => $this->input->post('email'),
+                'username'         => $this->input->post('username'),
+                'password'         => sha1($this->input->post('password')),
                 'date_inscription' => date("Y-m-d"),
-            );
+            ];
             $this->inscription_model->signup($data);
             $this->session->set_flashdata('message', 'Inscription réussie');
         } else {
@@ -93,8 +93,8 @@ class Test extends CI_Controller
 
         if ($this->form_validation->run()) {
             if ($this->connection_model->check_id($this->input->post('username'), $this->input->post('password'))) {
-                $data = array('login' => $this->input->post('username'), 'logged' => true);
-                $this->session->set_userdata($data);
+                $data = ['login' => $this->input->post('username'), 'logged' => true];
+                $this->session->set_userdata('login_User', $data);
                 $this->session->set_flashdata('message', 'Connexion réussie. Bonjour ' . $this->input->post('username') . ' !');
             } else {
                 $this->session->set_flashdata('error_ident', 'Mauvais identifiants');
@@ -116,12 +116,14 @@ class Test extends CI_Controller
     public function username_exists($key)
     {
         $this->load->model('inscription_model');
+
         return $this->inscription_model->check_pseudo($key);
     }
 
     public function email_exists($key)
     {
         $this->load->model('inscription_model');
+
         return $this->inscription_model->check_email($key);
     }
 }

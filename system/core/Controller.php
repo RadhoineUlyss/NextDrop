@@ -90,6 +90,14 @@ class CI_Controller
         log_message('info', 'Controller Class Initialized');
     }
 
+    /**
+     * @return boolean
+     */
+    public function isAdmin()
+    {
+        return (bool)$this->session->userdata('superadmin');
+    }
+
     // --------------------------------------------------------------------
 
     /**
@@ -102,5 +110,6 @@ class CI_Controller
     {
         return self::$instance;
     }
+
 
 }

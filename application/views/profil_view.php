@@ -3,6 +3,7 @@
  * @var string   $username
  * @var string   $email
  * @var DateTime $date_inscription
+ * @var          $this CI_Loader
  */
 ?>
 <h1> Page Profil </h1>
@@ -59,7 +60,7 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
     </table>
 </form>
 
-<?php if ($this->session->userdata('superadmin')) {
+<?php if ($this->getController()->isAdmin()) {
     echo '<h4 style="color:red;">Vous avez un compte administrateur</h4>';
 } ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
