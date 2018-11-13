@@ -1,3 +1,11 @@
+<?php
+/**
+ * @var string   $username
+ * @var string   $email
+ * @var DateTime $date_inscription
+ */
+?>
+
 <h1> Page Profil </h1>
 
 <p>Voilà la page profil.</p>
