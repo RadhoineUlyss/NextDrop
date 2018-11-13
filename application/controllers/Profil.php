@@ -33,7 +33,7 @@ class Profil extends CI_Controller
                 $this->session->set_userdata('superadmin', $data->superadmin);
             }
             $page = $this->load->view('profil_view', $data, true);
-            $this->dynamic_navbar->verification($page, 'profil_script');
+            $this->dynamic_navbar->verification($page, 'profil_script', 'profil_style');
         } else {
             redirect($this->session->flashdata('current_url'));
         }

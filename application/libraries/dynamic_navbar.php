@@ -5,7 +5,7 @@
 class Dynamic_navbar
 {
 
-    public function verification($page = '', $script='')
+    public function verification($page = '', $script='', $style='')
     {
         
         $view_data = array();
@@ -19,7 +19,8 @@ class Dynamic_navbar
             $data = [
                 'page' => $page,
                 'navbar' => $navbar,
-                'script' => $script
+                'script' => $script,
+                'style' => $style
             ];
             $data_merge = array_merge($data, $view_data);
             $CI->load->view('Template/template', $data_merge);
@@ -30,6 +31,7 @@ class Dynamic_navbar
                 'page' => $page,
                 'navbar' => $navbar,
                 'script' => $script,
+                'style' => $style,
                 'formulaire' => $formulaire
             ];
             $data_merge = array_merge($data, $view_data);
