@@ -5,7 +5,6 @@
  * @var DateTime $date_inscription
  */
 ?>
-
 <h1> Page Profil </h1>
 
 <p>Voilà la page profil.</p>
@@ -66,127 +65,91 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
 
-	$('td>.btn').click(function () {
-		var id        = $(this).attr('id');
-		var parent    = $(this).parent().parent();
-		var titre     = parent.children().eq(0);
-		var valeur    = parent.children().eq(1);
-		var input_val = parent.children().eq(1);
-		var bouton    = parent.children().eq(2);
-		parent.append("<form method=\"post\" action=\"\" id=\"info_compte\">" + "</form>");
-		input_val.html("<input id=\"nom\" type=\"text\" form=\"info_compte\" name=\"" + id + "\" value=\"" + valeur.text() + "\">");
-		bouton.html("<td><button id=\"\" type=\"submit\" form=\"info_compte\" class=\"btn btn-dark\">Accepter</button></td>");
+	$(document).ready(function (e) {
+		var email = $("#info_compte :input[name='email']").val();
+		$('#info_compte').on('input change', function () {
 
-		$('#info_compte').submit(function () {
+			if (($("#info_compte :input[name='email']").val() != email)) {
+				console.log(email + " " + $("#info_compte :input[name='email']").val());
+				$('#acc_cte').attr('disabled', false);
+			}
+			else {
+				$('#acc_cte').attr('disabled', false);
+			}
+		});
+
+		var nom    = $("#info_pers :input[name='nom']").val();
+		var prenom = $("#info_pers :input[name='prenom']").val();
+        /*	$('#info_pers').on('input change', function() {
+
+         if(($("#info_compte :input[name='email']").val() != email)){
+         console.log(email + " " + $("#info_compte :input[name='email']").val());
+         $('#acc_cte').attr('disabled', false);
+         }
+         else{
+         $('#acc_pers').attr('disabled', false);
+         }
+
+         });*/
+		$('#info_pers').submit(function () {
 			$.ajax({
-				url: '<?php echo base_url() . 'profil/modifier/' ?>',
+				url: '<?php echo base_url() . 'profil/modifierPerso/' ?>',
 				type: 'POST',
 				data: $(this).serialize(),
 				dataType: 'json',
 				success: function (data) {
+					$("#alert_pers").append('<div id="result_pers"></div>');
+
 					if (data.status === "succes") {
-						parent.children().eq(1).text(data.var);
-						bouton.html("<button id=\"" + id + "\" type=\"button\" class=\"btn btn-outline-dark\">Modifier</button>");
-						// $( "#test_array" ).load( "profil_view.php #test_array" );
-						$(document).ready(function (e) {
-							var email = $("#info_compte :input[name='email']").val();
-							$('#info_compte').on('input change', function () {
-
-								if (($("#info_compte :input[name='email']").val() != email)) {
-									console.log(email + " " + $("#info_compte :input[name='email']").val());
-									$('#acc_cte').attr('disabled', false);
-								}
-								else {
-									$('#acc_cte').attr('disabled', false);
-								}
-							});
-
-							var nom    = $("#info_pers :input[name='nom']").val();
-							var prenom = $("#info_pers :input[name='prenom']").val();
-                            /*	$('#info_pers').on('input change', function() {
-
-                             if(($("#info_compte :input[name='email']").val() != email)){
-                             console.log(email + " " + $("#info_compte :input[name='email']").val());
-                             $('#acc_cte').attr('disabled', false);
-                             }
-                             else{
-                             $('#acc_pers').attr('disabled', false);
-                             }
-
-                             });*/
-							$('#info_pers').submit(function () {
-								$.ajax({
-									url: '<?php echo base_url() . 'profil/modifierPerso/' ?>',
-									type: 'POST',
-									data: $(this).serialize(),
-									dataType: 'json',
-									success: function (data) {
-										$("#alert_pers").append('<div id="result_pers"></div>');
-
-										if (data.status === "succes") {
-											$("#result_pers").removeClass("alert-danger");
-											$("#result_pers").addClass("alert alert-success");
-											$("#result_pers").html('<button type="button" class="close" data-dismiss="alert">x</button>Informations personnelles modifiées');
-											$("#acc_pers").attr("disabled", true);
-										}
-										else {
-											$("#result_pers").removeClass("alert-succes");
-											$("#result_pers").addClass("alert alert-danger");
-											$("#result_pers").html('<button type="button" class="close" data-dismiss="alert">x</button>' + data.erreur);
-											console.log(data.nom);
-										}
-									},
-									error: function (data) {
-										console.log(this.data);
-									}
-									else {
-										console.log(data.nom);
-							}
-							},
-								error: function (data) {
-									console.log(this.data);
-								}
-							});
-						<<<<<<<
-							HEAD
-							return false;
-						});
-					======
-						=
-
-							$('#info_compte').submit(function () {
-
-								$.ajax({
-									url: '<?php echo base_url() . 'profil/modifierCompte/' ?>',
-									type: 'POST',
-									data: $(this).serialize(),
-									dataType: 'json',
-									success: function (data) {
-										$("#alert_cte").append('<div id="result_cte"></div>');
-									>>>>>>>
-										Lorenzo
-
-										if (data.status === "succes") {
-											$("#result_cte").removeClass("alert-danger");
-											$("#result_cte").addClass("alert alert-success");
-											$("#result_cte").html('<button type="button" class="close" data-dismiss="alert">x</button>Informations du compte modifiées');
-											$("#acc_cte").attr("disabled", true);
-										}
-										else {
-											$("#result_cte").removeClass("alert-succes");
-											$("#result_cte").addClass("alert alert-danger");
-											$("#result_cte").html('<button type="button" class="close" data-dismiss="alert">x</button>' + data.erreur);
-											console.log(data.nom);
-										}
-									},
-									error: function (data) {
-										console.log(this.data);
-									}
-								});
-								return false;
-							});
+						$("#result_pers").removeClass("alert-danger");
+						$("#result_pers").addClass("alert alert-success");
+						$("#result_pers").html('<button type="button" class="close" data-dismiss="alert">x</button>Informations personnelles modifiées');
+						$("#acc_pers").attr("disabled", true);
 					}
-				);
+					else {
+						$("#result_pers").removeClass("alert-succes");
+						$("#result_pers").addClass("alert alert-danger");
+						$("#result_pers").html('<button type="button" class="close" data-dismiss="alert">x</button>' + data.erreur);
+						console.log(data.nom);
+					}
+				},
+				error: function (data) {
+					console.log(this.data);
+				}
+			});
+			return false;
+		});
+
+		$('#info_compte').submit(function () {
+
+			$.ajax({
+				url: '<?php echo base_url() . 'profil/modifierCompte/' ?>',
+				type: 'POST',
+				data: $(this).serialize(),
+				dataType: 'json',
+				success: function (data) {
+					$("#alert_cte").append('<div id="result_cte"></div>');
+
+					if (data.status === "succes") {
+						$("#result_cte").removeClass("alert-danger");
+						$("#result_cte").addClass("alert alert-success");
+						$("#result_cte").html('<button type="button" class="close" data-dismiss="alert">x</button>Informations du compte modifiées');
+						$("#acc_cte").attr("disabled", true);
+					}
+					else {
+						$("#result_cte").removeClass("alert-succes");
+						$("#result_cte").addClass("alert alert-danger");
+						$("#result_cte").html('<button type="button" class="close" data-dismiss="alert">x</button>' + data.erreur);
+						console.log(data.nom);
+					}
+				},
+				error: function (data) {
+					console.log(this.data);
+				}
+			});
+			return false;
+		});
+	});
 
 
 </script>
