@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
+
 class Profil extends CI_Controller
 {
 
@@ -28,11 +29,11 @@ class Profil extends CI_Controller
 
         if ($this->session->userdata('login') || $this->session->userdata('logged')) {
             $this->session->set_flashdata('current_url', current_url());
-            $data = $this->getData();
-            if ($data->superadmin) {
-                $this->session->set_userdata('superadmin', $data->superadmin);
+            $user = $this->getData();
+            if ($user->superadmin) {
+                $this->session->set_userdata('superadmin', $user->superadmin);
             }
-            $page = $this->load->view('profil_view', $data, true);
+            $page = $this->load->view('profil_view', $user, true);
             $this->dynamic_navbar->verification($page, 'profil_script');
         } else {
             redirect($this->session->flashdata('current_url'));
@@ -49,24 +50,23 @@ class Profil extends CI_Controller
     public function modifierCompte()
     {
         $this->load->model('connection_model');
-    
+
         $this->form_validation->set_message('is_unique', 'L\'email est déjà utilisé');
         $this->form_validation->set_message('valid_email', 'L\'adresse email doit être valide');
 
         $this->form_validation->set_rules('email', 'Email', 'trim|valid_email|is_unique[membres.email]|required');
 
         if ($this->form_validation->run()) {
-        $data = $this->input->post();
-          
-        $this->connection_model->modify($this->session->userdata('login'), $data);
-        $json = array(
-            'status' => 'succes'
-        );
-        }
-        else{
-            $json = array(
+            $data = $this->input->post();
+
+            $this->connection_model->modify($this->session->userdata('login'), $data);
+            $json = [
+                'status' => 'succes'
+            ];
+        } else {
+            $json = [
                 'erreur' => validation_errors()
-            );
+            ];
         }
 
         header("Content-type:application/json");
@@ -76,24 +76,23 @@ class Profil extends CI_Controller
     public function modifierPerso()
     {
         $this->load->model('connection_model');
-    
+
         $this->form_validation->set_message('min_length', 'Minimum 5 caractères pour le %s');
 
         $this->form_validation->set_rules('prenom', 'Prénom', 'trim|required');
         $this->form_validation->set_rules('nom', 'Nom', 'trim|required');
 
         if ($this->form_validation->run()) {
-        $data = $this->input->post();
-          
-        $this->connection_model->modify($this->session->userdata('login'), $data);
-        $json = array(
-            'status' => 'succes'
-        );
-        }
-        else{
-            $json = array(
+            $data = $this->input->post();
+
+            $this->connection_model->modify($this->session->userdata('login'), $data);
+            $json = [
+                'status' => 'succes'
+            ];
+        } else {
+            $json = [
                 'erreur' => validation_errors()
-            );
+            ];
         }
 
         header("Content-type:application/json");
