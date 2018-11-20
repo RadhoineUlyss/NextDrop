@@ -95,12 +95,7 @@ class CI_Controller
      */
     public function isAdmin()
     {
-        if (isset($this->session->userdata('login_User')['superadmin'])) {
-            return (bool)$this->session->userdata('login_User')['superadmin'];
-        } else {
-            return false;
-        }
-
+        return (bool)$this->session->userdata('login_User')['superadmin'];
     }
 
     // --------------------------------------------------------------------
