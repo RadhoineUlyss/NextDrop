@@ -15,7 +15,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <?php if ($style != '') {
     echo "<link rel=\"stylesheet\" href=".base_url()."assets/custom/css/".$style.".css>";
     }?>
-    
 </head>
 <!-- NE PAS TOUCHER EN HAUT -->
 <body>
