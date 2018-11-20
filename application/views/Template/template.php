@@ -12,34 +12,31 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <!-- Bootstrap CSS-->
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/custom/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <?php if ($style != '') {
     echo "<link rel=\"stylesheet\" href=".base_url()."assets/custom/css/".$style.".css>";
     }?>
-    
 </head>
 <!-- NE PAS TOUCHER EN HAUT -->
 <body>
 
 <header>
     <!-- LA BARRE DE NAVIGATION DEBUT -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="<?php echo base_url('') ?>">NextDrop</a>
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <div class="d-flex flex-row-reverse">
+            <form class="form-inline md-form form-sm mt-0">
+                <i id="searchicon" class="fa fa-search" aria-hidden="true"></i>
+                <input class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/Logo_nextdrop_noir.png"></a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('') ?>">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('/galerie') ?>">Galerie</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Page 2</a>
-                </li>
-            </ul>
-            <div>
+            <div class="d-flex flex-row-reverse">
                 <?php echo $navbar ?> <!-- $navbar correspond aux boutons présents à droite de la barre (ex : Se connecter ) -->
             </div>
         </div>

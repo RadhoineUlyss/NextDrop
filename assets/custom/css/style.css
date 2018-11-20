@@ -1,33 +1,57 @@
 html {
     position: relative;
     min-height: 100%;
-  }
-  body {
+}
+body {
     margin-bottom: 200px; /* Margin bottom by footer height */
-  }
-  .footer {
+}
+#logotop{
+    max-height:50px;
+}
+.navbar-header {
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+#searchicon{
+    margin-right:5%;
+}
+.form-inline{
+    flex-flow: row;
+}
+.form-control-sm{
+    width:80%;
+    border: none;
+}
+.navbar-brand {
+    float:none;
+}
+.btn btn-outline-info{
+
+}
+.btn btn-outline-success{
+
+}
+.footer {
     text-align: center;
     position: absolute;
     bottom: 0;
     width: 100%;
     height: auto; /* Set the fixed height of the footer here */
-
-  }
-  .prem_footer{
+}
+.prem_footer{
     background-color: #e2e2e2;
     padding-bottom: 20px;
-  }
-  .sec_footer{
+}
+.sec_footer{
     background-color: #cccccc;
-  }
-
+}
 #social{
     text-align: center;
     padding-top:1%;
     padding-bottom:1%;
 }
-
-  .modal-login {		
+.modal-login {		
     color: #636363;
     width: 350px;
 }
@@ -68,8 +92,7 @@ html {
 }
 .modal-login .modal-footer a {
     color: white;
-}		
-
+}
 .modal-login.modal-dialog {
     margin-top: 80px;
 }
