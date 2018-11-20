@@ -68,30 +68,9 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
 <script type="text/javascript">
 
 	$(document).ready(function (e) {
-		var email = $("#info_compte :input[name='email']").val();
 
-		$('#info_compte').on('input change', function () {
-
-			if ($("#info_compte :input[name='email']").val() != email) {
-				console.log(email + " " + $("#info_compte :input[name='email']").val());
-				$('#acc_cte').attr('disabled', false);
-			}
-			else {
-				$('#acc_cte').attr('disabled', true);
-			}
-		});
-
-		var nom    = $("#info_pers :input[name='nom']").val();
-		var prenom = $("#info_pers :input[name='prenom']").val();
-
-		$("#info_pers").on('input change', function () {
-			if ($("#info_pers :input[name='nom']").val() != nom || $("#info_pers :input[name='prenom']").val() != prenom) {
-				$('#acc_pers').attr('disabled', false);
-			}
-			else {
-				$('#acc_pers').attr('disabled', true);
-			}
-		});
+		initialise();
+		
         /*$('#info_pers').on('input change', function() {
 
          if (($("#info_compte :input[name='email']").val() != email)) {
@@ -130,6 +109,7 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
 						$("#result_pers").addClass("alert alert-success");
 						$("#result_pers").html('<button type="button" class="close" data-dismiss="alert">x</button>Informations personnelles modifiées');
 						$("#acc_pers").attr("disabled", true);
+						initialise();
 					}
 					else {
 						$("#result_pers").removeClass("alert-succes");
@@ -160,6 +140,7 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
 						$("#result_cte").addClass("alert alert-success");
 						$("#result_cte").html('<button type="button" class="close" data-dismiss="alert">x</button>Informations du compte modifiées');
 						$("#acc_cte").attr("disabled", true);
+						initialise();
 					}
 					else {
 						$("#result_cte").removeClass("alert-succes");
@@ -175,6 +156,34 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
 			return false;
 		});
 	});
+
+	function initialise()
+{
+    var email = $("#info_compte :input[name='email']").val();
+
+		$('#info_compte').on('input change', function () {
+
+			if ($("#info_compte :input[name='email']").val() != email) {
+				console.log(email + " " + $("#info_compte :input[name='email']").val());
+				$('#acc_cte').attr('disabled', false);
+			}
+			else {
+				$('#acc_cte').attr('disabled', true);
+			}
+		});
+
+		var nom    = $("#info_pers :input[name='nom']").val();
+		var prenom = $("#info_pers :input[name='prenom']").val();
+
+		$("#info_pers").on('input change', function () {
+			if ($("#info_pers :input[name='nom']").val() != nom || $("#info_pers :input[name='prenom']").val() != prenom) {
+				$('#acc_pers').attr('disabled', false);
+			}
+			else {
+				$('#acc_pers').attr('disabled', true);
+			}
+		});
+}
 
 
 </script>
