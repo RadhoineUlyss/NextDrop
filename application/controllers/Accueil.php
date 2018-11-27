@@ -27,7 +27,7 @@ class Accueil extends CI_Controller
         // On affiche notre page avec le template
         $this->session->set_flashdata('current_url', current_url());
         $page = $this->load->view('accueil_view', '', true);
-        $this->dynamic_navbar->verification($page);
+        $this->dynamic_navbar->verification($page, '', 'accueil_style');
 
     }
 }

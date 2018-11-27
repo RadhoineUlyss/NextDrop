@@ -6,15 +6,25 @@ body {
     margin-bottom: 200px; /* Margin bottom by footer height */
 }
 #logotop{
-    max-height:50px;
+    max-height:70px;
 }
 .navbar-header {
     float: left;
     text-align: center;
     width: 100%;
+    margin-right:4%;
 }
 #searchicon{
     margin-right:5%;
+}
+#searchbar{
+    margin-left: 10px;
+    width: 100%;
+    border-radius: 20px;
+    visibility: hidden;
+}
+input:focus {
+    outline:none !important;
 }
 .form-inline{
     flex-flow: row;
@@ -25,6 +35,41 @@ body {
 }
 .navbar-brand {
     float:none;
+}
+#navigation{
+    background-color: #f8f9fa !important;
+    margin-bottom: 50px;
+}
+#navigation ul{
+    list-style: none;
+}
+#navigation ul li{
+    float:left;
+}
+#navigation ul li a{
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 300 !important;
+    text-decoration: none;
+    color:black;
+}
+#navigation ul li:first-child{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#navigation ul li:nth-child(2){
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#navigation ul li:nth-child(3){
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#navigation ul li:nth-child(4){
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#navigation ul li:last-child{
+    margin-left: 2%;
 }
 .btn btn-outline-info{
 
@@ -41,7 +86,6 @@ body {
 }
 .prem_footer{
     background-color: #e2e2e2;
-    padding-bottom: 20px;
 }
 .sec_footer{
     background-color: #cccccc;

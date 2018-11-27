@@ -1,75 +1,84 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
-?><!DOCTYPE html>
+    defined('BASEPATH') or exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Page d'accueil</title>
-
-    <!-- Bootstrap CSS-->
-    <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/custom/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <?php if ($style != '') {
-    echo "<link rel=\"stylesheet\" href=".base_url()."assets/custom/css/".$style.".css>";
-    }?>
-</head>
-<!-- NE PAS TOUCHER EN HAUT -->
-<body>
-
-<header>
-    <!-- LA BARRE DE NAVIGATION DEBUT -->
-    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
-        <div class="d-flex flex-row-reverse">
-            <form class="form-inline md-form form-sm mt-0">
-                <i id="searchicon" class="fa fa-search" aria-hidden="true"></i>
-                <input class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
-            </form>
-        </div>
-        <div class="navbar-header">
-            <a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/Logo_nextdrop_noir.png"></a>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="d-flex flex-row-reverse">
-                <?php echo $navbar ?> <!-- $navbar correspond aux boutons présents à droite de la barre (ex : Se connecter ) -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>NEXTDROP - Page d'accueil</title>
+        <!-- Bootstrap CSS-->
+        <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/custom/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Font -->
+        <link type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,700"/>
+        <?php
+            if ($style != '') {
+                echo "<link rel=\"stylesheet\" href=".base_url()."assets/custom/css/".$style.".css>";
+            }
+        ?>
+    </head>
+    <!-- NE PAS TOUCHER EN HAUT -->
+    <body>
+        <header>
+            <!-- LA BARRE DE NAVIGATION DEBUT -->
+            <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+                <div class="d-flex flex-row-reverse">
+                    <form class="form-inline md-form form-sm mt-0">
+                        <span onclick="DisplaySearchBar()"><i id="searchicon" class="fa fa-search fa-lg" aria-hidden="true"></i></span>
+                        <input id="searchbar" class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/Logo_nextdrop_noir.png"></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="d-flex flex-row-reverse">
+                        <?php echo $navbar ?> <!-- $navbar correspond aux boutons présents à droite de la barre (ex : Se connecter ) -->
+                    </div>
+                </div>
+            </nav>
+            <div id="navigation">
+                <ul>
+                    <li><a href="">SNEAKERS</a></li>
+                    <li><a href="">STREETWEAR</a></li>
+                    <li><a href="">ACCESSOIRES</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
             </div>
-        </div>
-    </nav>
-    <!-- LA BARRE DE NAVIGATION FIN -->
-</header>
-
-<div>
-    <?php if ($this->session->flashdata('message')) {
-        echo '<div class="alert alert-success" id="success-alert">
-  <button type="button" class="close" data-dismiss="alert">x</button>
-  <strong>' . $this->session->flashdata('message') . '</strong>
-</div>';
-    } ?>
-    <?php if (isset($formulaire)) {
-        echo $formulaire;
-    }
-    ?>
-    <!-- LA VUE DYNAMIQUE COMMENCE ICI -->
-    <div class="container"><?php echo $page; ?></div>
-
-</div>
-
-<footer class="footer">
-<div>
-<div class="prem_footer">
-        <p>Ceci est le footer.</p>
-        <p>Page rendered in <strong>{elapsed_time}</strong> seconds.</p>
-<a href="<?php echo base_url('') ?>"> Vous pouvez cliquer ici pour revenir à l'accueil</a>
-</div>
-<div class="sec_footer">
-NextDrop © 2018
-<div id="social">
+            <!-- LA BARRE DE NAVIGATION FIN -->
+    </header>
+    <div>
+        <?php
+            if ($this->session->flashdata('message')) {
+                echo '<div class="alert alert-success" id="success-alert">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>' . $this->session->flashdata('message') . '</strong>
+                </div>';
+            }
+        ?>
+        <?php 
+            if (isset($formulaire)) {
+                echo $formulaire;
+            }
+        ?>
+        <!-- LA VUE DYNAMIQUE COMMENCE ICI -->
+        <div class="container"><?php echo $page; ?></div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <div class="prem_footer">
+                <p>Page rendered in <strong>{elapsed_time}</strong> seconds.</p>
+            </div>
+            <div class="sec_footer"> NextDrop © 2018
+                <div id="social">
                     <a href="https://www.instagram.com/" style="text-decoration:none;">
                         <svg id="instagram" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="20px" height="20px" viewBox="0 0 169.063 169.063" style="enable-background:new 0 0 169.063 169.063;margin-right:1%;"xml:space="preserve">
                             <g>
@@ -92,27 +101,29 @@ NextDrop © 2018
                         </svg>
                     </a>
                 </div>
-</div>
-</footer>
+            </div>
+        </div>
+    </footer>
+    <!-- NE PAS TOUCHER EN BAS -->
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>assets/custom/js/display_searchbar.js"></script>
+    <?php 
+        if ($script != '') {
+            echo "<script src=\"" . base_url() . "assets/custom/js/" . $script . ".js\"></script>";
+        }
+    ?>
 
-<!-- NE PAS TOUCHER EN BAS -->
-<!-- jQuery-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Bootstrap JS-->
-<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-<?php if ($script != '') {
-    echo "<script src=\"" . base_url() . "assets/custom/js/" . $script . ".js\"></script>";
-}
-?>
-
-<?php
-if ($this->session->flashdata('error_ins')) {
-    echo "<script>$('#myModal2').modal('show');</script>";
-} else {
-    if ($this->session->flashdata('error_ident')) {
-        echo "<script>$('#myModal').modal('show');</script>";
-    }
-}
-?>
-</body>
+    <?php
+        if ($this->session->flashdata('error_ins')) {
+            echo "<script>$('#myModal2').modal('show');</script>";
+        } else {
+            if ($this->session->flashdata('error_ident')) {
+                echo "<script>$('#myModal').modal('show');</script>";
+            }
+        }
+    ?>
+    </body>
 </html>
