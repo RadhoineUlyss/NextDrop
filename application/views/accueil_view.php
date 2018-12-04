@@ -25,3 +25,8 @@
         <span class="carousel-control-next-icon"></span>
     </a>
 </div>
+<div id="catepics">
+    <a href=""><img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png"></a>
+    <a href=""><img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png"></a>
+    <a href=""><img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png"></a>
+</div>

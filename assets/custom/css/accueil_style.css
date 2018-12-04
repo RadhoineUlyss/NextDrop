@@ -14,3 +14,20 @@
     font-size: 55px;
     color: black;
 }
+
+#catepics{
+    margin-top: 5%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#catepics a img{
+    width: 25%;
+    height: 25%;
+    margin-right: 2%;
+}
+
+#catepics a img:last-child{
+    margin-right:none !important;
+}
