@@ -77,7 +77,7 @@ class Profil extends CI_Controller
         if ($this->form_validation->run()) {
             $data = $this->input->post();
 
-            $this->connection_model->modify($this->session->userdata('login_User')['login'], $data);
+            $this->connection_model->modifyCte($this->session->userdata('login_User')['login'], $data);
             $json = [
                 'status' => 'succes'
             ];
@@ -101,8 +101,9 @@ class Profil extends CI_Controller
         $this->form_validation->set_rules('nom', 'Nom', 'trim|required');
 
         if ($this->form_validation->run()) {
-            $data = $this->input->post();
-            $this->connection_model->modify($this->session->userdata('login_User')['login'], $data);
+            $data = $this->input->post(array('nom', 'prenom'));
+            $add = $this->input->post(array('code_postal', 'ville','ligne_adresse'));
+            $this->connection_model->modifyPers($this->session->userdata('login_User')['login'], $data, $add);
             $json = [
                 'status' => 'succes'
             ];
