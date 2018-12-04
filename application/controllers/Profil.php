@@ -30,11 +30,13 @@ class Profil extends CI_Controller
         if ($this->session->userdata('login_User')) {
             $this->session->set_flashdata('current_url', current_url());
             $user = $this->getData();
+            $adresse = $this->getAdresse($this->getId());
             if ($user->superadmin) {
                 $data               = $this->session->userdata('login_User');
                 $data['superadmin'] = $user->superadmin;
                 $this->session->set_userdata('login_User', $data);
             }
+            $user->adresse = $adresse;
             $page = $this->load->view('profil_view', $user, true);
             $this->dynamic_navbar->verification($page, 'profil_script', 'profil_style');
         } else {
@@ -42,11 +44,25 @@ class Profil extends CI_Controller
         }
     }
 
+
+    private function getId()
+    {
+        $this->load->model('connection_model');
+
+        return $this->connection_model->getId($this->session->userdata('login_User')['login']);
+    }
+
     private function getData()
     {
         $this->load->model('connection_model');
 
         return $this->connection_model->getData($this->session->userdata('login_User')['login']);
+    }
+
+    private function getAdresse($id){
+        $this->load->model('connection_model');
+
+        return $this->connection_model->getAdresse($id);
     }
 
     public function modifierCompte()
@@ -86,7 +102,6 @@ class Profil extends CI_Controller
 
         if ($this->form_validation->run()) {
             $data = $this->input->post();
-
             $this->connection_model->modify($this->session->userdata('login_User')['login'], $data);
             $json = [
                 'status' => 'succes'
@@ -102,3 +117,4 @@ class Profil extends CI_Controller
     }
 
 }
+

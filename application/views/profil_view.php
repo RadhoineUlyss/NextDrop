@@ -50,7 +50,10 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
         </tr>
         <tr>
             <th scope="row">Adresse :</th>
-            <td><?php echo $code_postal . " " . $ville . " " . $ligne_adresse ?></td>
+			<td><?php echo '<input type="text" name="code_postal" value="'. $adresse->code_postal . '">' ?>
+			<?php echo '<input type="text" name="ville" value="'. $adresse->pays . '">' ?>
+			<?php echo '<input type="text" name="ligne_adresse" value="'. $adresse->ligne_adresse . '">' ?></td>
+			
         </tr>
         <tr>
             <div id="alert_pers"></div>

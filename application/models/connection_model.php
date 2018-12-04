@@ -10,22 +10,40 @@ class connection_model extends CI_Model
         $this->db->where('password', sha1($pass));
         $q = $this->db->get('membres');
         if ($q->num_rows() > 0) {
-            return true;
+            $this->db->where('username', $pseudo);
+            return $this->getId($pseudo);
         } else {
-            return false;
+            return 0;
         }
     }
 
+    public function getId($username)
+    {
+        $this->db->select('id');
+        $this->db->where('username', $username);
+        $query = $this->db->get('membres');
+        $data  = $query->first_row();
+        return $data->id;
+    }
+    
     public function getData($username)
     {
         $this->db->where('username', $username);
         $query = $this->db->get('membres');
         $data  = $query->first_row();
+        return $data;
+    }
+
+    public function getAdresse($membre_id)
+    {
+        $this->db->where('membre_id', $membre_id);
+        $query = $this->db->get('adresse');
+        $data  = $query->first_row();
 
         return $data;
     }
 
-    function modify($id, $data)
+    function modify($id, $data, $add)
     {
         //$this->db->update_string('membres', $data, $id);
         /*$this->db->where('username', $id);
@@ -33,5 +51,9 @@ class connection_model extends CI_Model
         $this->db->set($data);
         $this->db->where('username', $id);
         $this->db->update('membres');
+
+        $this->db->set($add);
+        $this->db->where('membre_id', $id);
+        $this->db->update('adresse');
     }
 }
