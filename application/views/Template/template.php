@@ -45,7 +45,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </nav>
     <div id="navigation">
         <ul>
-            <li><a href="">SNEAKERS</a></li>
+            <li><a href="<?php echo base_url('/sneakers') ?>">SNEAKERS</a></li>
             <li><a href="">STREETWEAR</a></li>
             <li><a href="">ACCESSOIRES</a></li>
             <li><a href="">ABOUT US</a></li>
