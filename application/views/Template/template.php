@@ -94,10 +94,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <a class="fb-ic"> <i class="fa fa-facebook white-text mr-4"> </i> </a>
                     <!-- Twitter -->
                     <a class="tw-ic"> <i class="fa fa-twitter white-text mr-4"> </i> </a>
-                    <!-- Google +-->
-                    <a class="gplus-ic"> <i class="fa fa-google-plus white-text mr-4"> </i> </a>
-                    <!--Linkedin -->
-                    <a class="li-ic"> <i class="fa fa-linkedin white-text mr-4"> </i> </a>
                     <!--Instagram-->
                     <a class="ins-ic"> <i class="fa fa-instagram white-text"> </i> </a>
 
@@ -121,7 +117,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 <!-- Content -->
                 <h6 class="text-uppercase font-weight-bold">NextDrop</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
             </div>
@@ -132,18 +127,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">Nos produits</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
                     <a href="#!">SNEAKERS</a>
                 </p>
                 <p>
-                    <a href="#!">STREET WEARS</a>
+                    <a href="#!">STREETWEAR</a>
                 </p>
                 <p>
-                    <a href="#!">ACCESSOIRE</a>
-                </p>
-                <p>
-                    <a href="#!">Bootstrap Angular</a>
+                    <a href="#!">ACCESSOIRES</a>
                 </p>
 
             </div>
@@ -154,7 +145,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">Useful links</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
                     <a href="#!">VOTRE COMPTE</a>
                 </p>
@@ -173,7 +163,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
                     <i class="fa fa-home mr-3"></i> Aix-En-Provence, PACA 13090, FR</p>
                 <p>

@@ -11,10 +11,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			</div>
 			<div class="modal-body">
 			<?php if ($this->session->flashdata('error_ident')) {
-    echo '<div class="alert alert-danger" id="danger-alert">
-  <strong>' . $this->session->flashdata('error_ident') . '</strong>
-</div>';
-}?>
+    			echo '<div class="alert alert-danger" id="danger-alert"><strong>' . $this->session->flashdata('error_ident') . '</strong></div>';
+			}?>
             <?php echo form_open('Test/connection'); ?> <!-- FORMULAIRE CONNECTION DEBUT  -->
 					<div class="form-group">
 					<?php echo form_error('username', '<span class="error">', '</span>'); ?>
@@ -32,25 +30,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<div class="modal-footer">
 				<a href="#">Mot de passe oublié ?</a>
 			</div>
-		</div>
-	</div>
-</div>
 
-    </div>
-
-<div id="myModal2" class="modal fade">
-	<div class="modal-dialog modal-login">
-		<div class="modal-content">
 			<div class="modal-header">
 				<h4 class="modal-title">Inscription</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			</div>
 			<div class="modal-body">
 			<?php if ($this->session->flashdata('error_ins')) {
-    echo '<div class="alert alert-danger" id="danger-alert">
-  ' . $this->session->flashdata('error_ins') .'
-</div>';
-}?>
+    			echo '<div class="alert alert-danger" id="danger-alert">' . $this->session->flashdata('error_ins') .'</div>';
+			}?>
 			<?php echo form_open('Test/inscription'); ?> <!-- FORMULAIRE INSCRIPTION DEBUT  -->
                     <div class="form-group">
 					<?php echo form_error('nom', '<span class="error">', '</span>'); ?>
@@ -80,4 +68,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		</div>
 	</div>
 </div>
+
+    </div>
 </div>

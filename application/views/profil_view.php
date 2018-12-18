@@ -7,12 +7,7 @@
  *
  */
 ?>
-<h1> Page Profil </h1>
-
-<p>Voilà la page profil.</p>
-
-<p>Ici se trouve les infos concernant l'utilisateur connecté, s'il est admin il a plus d'options, etc..</p>
-
+<h1 id=""> Mon Profil </h1>
 <h3> Informations du compte</h3>
 <form method="post" action="" id="info_compte">
     <table id="test_array" class="table table-striped">
