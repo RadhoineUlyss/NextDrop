@@ -43,7 +43,7 @@ class connection_model extends CI_Model
         return $data;
     }
 
-    function modify($id, $data, $add)
+    function modifyPers($id, $data, $add)
     {
         //$this->db->update_string('membres', $data, $id);
         /*$this->db->where('username', $id);
@@ -53,7 +53,17 @@ class connection_model extends CI_Model
         $this->db->update('membres');
 
         $this->db->set($add);
-        $this->db->where('membre_id', $id);
+        $this->db->where('membre_id', $this->getId($id));
         $this->db->update('adresse');
+    }
+
+    function modifyCte($id, $data)
+    {
+        //$this->db->update_string('membres', $data, $id);
+        /*$this->db->where('username', $id);
+        $this->db->update('membres', $data); */
+        $this->db->set($data);
+        $this->db->where('username', $id);
+        $this->db->update('membres');
     }
 }

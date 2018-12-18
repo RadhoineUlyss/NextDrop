@@ -22,7 +22,7 @@
         </tr>
         <tr>
             <th scope="row">Email :</th>
-            <td><input type="mail" name="email" value="<?php echo $email ?>"></td>
+            <td><input type="mail" name="email" placeholder="Votre email" value="<?php echo $email ?>"></td>
         </tr>
         <tr>
             <div id="alert_cte"></div>
@@ -42,17 +42,17 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
     <table class="table table-striped">
         <tr>
             <th scope="row">Nom :</th>
-            <td><input type="text" name="nom" value="<?php echo $nom ?>"></td>
+            <td><input type="text" name="nom" placeholder="Nom" value="<?php echo $nom ?>"></td>
         </tr>
         <tr>
             <th scope="row">Prénom :</th>
-            <td><input type="text" name="prenom" value="<?php echo $prenom ?>"></td>
+            <td><input type="text" name="prenom" placeholder="Prénom" value="<?php echo $prenom ?>"></td>
         </tr>
         <tr>
             <th scope="row">Adresse :</th>
-			<td><?php echo '<input type="text" name="code_postal" value="'. $adresse->code_postal . '">' ?>
-			<?php echo '<input type="text" name="ville" value="'. $adresse->pays . '">' ?>
-			<?php echo '<input type="text" name="ligne_adresse" value="'. $adresse->ligne_adresse . '">' ?></td>
+			<td><?php echo '<input type="text" name="code_postal" placeholder="CP" value="'. $adresse->code_postal . '">' ?>
+			<?php echo '<input type="text" name="ville" placeholder="Ville" value="'. $adresse->ville . '">' ?>
+			<?php echo '<input type="text" name="ligne_adresse" placeholder="Ligne adresse" value="'. $adresse->ligne_adresse . '">' ?></td>
 			
         </tr>
         <tr>
@@ -167,7 +167,7 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
 		$('#info_compte').on('input change', function () {
 
 			if ($("#info_compte :input[name='email']").val() != email) {
-				console.log(email + " " + $("#info_compte :input[name='email']").val());
+				//console.log(email + " " + $("#info_compte :input[name='email']").val());
 				$('#acc_cte').attr('disabled', false);
 			}
 			else {
@@ -175,11 +175,11 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
 			}
 		});
 
-		var nom    = $("#info_pers :input[name='nom']").val();
-		var prenom = $("#info_pers :input[name='prenom']").val();
+		var $form = $('#info_pers');
+		var initialState = $form.serialize();
 
 		$("#info_pers").on('input change', function () {
-			if ($("#info_pers :input[name='nom']").val() != nom || $("#info_pers :input[name='prenom']").val() != prenom) {
+			if (initialState != $form.serialize()) {
 				$('#acc_pers').attr('disabled', false);
 			}
 			else {
