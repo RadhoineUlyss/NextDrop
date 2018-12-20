@@ -50,10 +50,10 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
         </tr>
         <tr>
             <th scope="row">Adresse :</th>
-			<td><?php echo '<input type="text" name="code_postal" placeholder="CP" value="'. $adresse->code_postal . '">' ?>
-			<?php echo '<input type="text" name="ville" placeholder="Ville" value="'. $adresse->ville . '">' ?>
-			<?php echo '<input type="text" name="ligne_adresse" placeholder="Ligne adresse" value="'. $adresse->ligne_adresse . '">' ?></td>
-			
+            <td><?php echo '<input type="text" name="code_postal" placeholder="CP" value="' . $adresse->code_postal . '">' ?>
+                <?php echo '<input type="text" name="ville" placeholder="Ville" value="' . $adresse->ville . '">' ?>
+                <?php echo '<input type="text" name="ligne_adresse" placeholder="Ligne adresse" value="' . $adresse->ligne_adresse . '">' ?></td>
+
         </tr>
         <tr>
             <div id="alert_pers"></div>
@@ -64,16 +64,17 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
     </table>
 </form>
 
-<?php if ($this->getController()->isAdmin()) {
+<?php
+if ($this->getController()->isAdmin()) {
     echo '<h4 style="color:red;">Vous avez un compte administrateur</h4>';
-} ?>
+}
+?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
 
 	$(document).ready(function (e) {
-
 		initialise();
-		
+
         /*$('#info_pers').on('input change', function() {
 
          if (($("#info_compte :input[name='email']").val() != email)) {
@@ -160,9 +161,8 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
 		});
 	});
 
-	function initialise()
-{
-    var email = $("#info_compte :input[name='email']").val();
+	function initialise() {
+		var email = $("#info_compte :input[name='email']").val();
 
 		$('#info_compte').on('input change', function () {
 
@@ -175,7 +175,7 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
 			}
 		});
 
-		var $form = $('#info_pers');
+		var $form        = $('#info_pers');
 		var initialState = $form.serialize();
 
 		$("#info_pers").on('input change', function () {
@@ -186,7 +186,7 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
 				$('#acc_pers').attr('disabled', true);
 			}
 		});
-}
+	}
 
 
 </script>
