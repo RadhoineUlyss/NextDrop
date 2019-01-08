@@ -32,9 +32,10 @@ input:focus {
 }
 .navbar-brand {
     float:none;
+    margin-right: 0;
 }
 .btn-outline-success{
-    margin-right: 5%;
+    margin-right: 2%;
 }
 #navigation{
     background-color: #f8f9fa !important;

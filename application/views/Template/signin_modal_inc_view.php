@@ -6,7 +6,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<div class="modal-dialog modal-login">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title">Connection</h4>
+				<h4 class="modal-title">Connexion</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			</div>
 			<div class="modal-body">
