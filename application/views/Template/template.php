@@ -128,7 +128,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">Nos produits</h6>
                 <p>
-                    <a href="#!">SNEAKERS</a>
+                    <a href="<?php echo base_url('/sneakers') ?>">SNEAKERS</a>
                 </p>
                 <p>
                     <a href="#!">STREETWEAR</a>
@@ -144,7 +144,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
                 <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                <h6 class="text-uppercase font-weight-bold">Liens utiles</h6>
                 <p>
                     <a href="#!">VOTRE COMPTE</a>
                 </p>
@@ -164,13 +164,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">Contact</h6>
                 <p>
-                    <i class="fa fa-home mr-3"></i> Aix-En-Provence, PACA 13090, FR</p>
+                    <i class="fa fa-home mr-3"></i> Aix-En-Provence 13090 FR</p>
                 <p>
                     <i class="fa fa-envelope mr-3"></i> hello@nextdrop.com</p>
                 <p>
                     <i class="fa fa-phone mr-3"></i> + 33 11 11 11 11</p>
-                <p>
-                    <i class="fa fa-print mr-3"></i> + 33 11 11 11 11</p>
 
             </div>
             <!-- Grid column -->

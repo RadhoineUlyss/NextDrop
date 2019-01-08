@@ -33,6 +33,9 @@ input:focus {
 .navbar-brand {
     float:none;
 }
+.btn-outline-success{
+    margin-right: 5%;
+}
 #navigation{
     background-color: #f8f9fa !important;
     margin-bottom: 50px;
@@ -67,12 +70,6 @@ input:focus {
 }
 #navigation ul li:last-child{
     margin-left: 2%;
-}
-.btn btn-outline-info{
-
-}
-.btn btn-outline-success{
-
 }
 .footer {
     text-align: center;
