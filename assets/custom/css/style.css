@@ -13,6 +13,7 @@ html {
 }
 #searchicon{
     margin-right:5%;
+    cursor:pointer;
 }
 #searchbar{
     margin-left: 10px;
@@ -90,9 +91,17 @@ input:focus {
     padding-top:1%;
     padding-bottom:1%;
 }
-.modal-login {		
+.modal-login:first-child {		
     color: #636363;
     width: 350px;
+    float: left;
+    margin-left: 23%;
+}
+.modal-login:last-child {		
+    color: #636363;
+    width: 350px;
+    float: left;
+    margin-left: 10%;
 }
 .modal-login .modal-content {
     padding: 20px;
@@ -147,4 +156,15 @@ input:focus {
 .modal-login .btn:hover, .modal-login .btn:focus {
     background: #212121;
     outline: none;
+}
+.modal-backdrop{
+    opacity:0.8 !important;
+}
+.whiteicon{
+    color: #D5D5D5;
+    text-decoration: none;
+    outline: none;
+}
+a:-webkit-any-link{
+    text-decoration:none !important;
 }

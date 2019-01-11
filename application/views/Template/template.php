@@ -75,7 +75,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark prem_footer">
 
-    <div style="background-color: #6351ce;">
+    <div style="background-color: #2F2F2F;">
         <div class="container">
 
             <!-- Grid row-->
@@ -83,7 +83,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 <!-- Grid column -->
                 <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                    <h6 class="mb-0">Connectez-vous avec nous sur les réseaux sociaux !</h6>
+                    <h6 class="mb-0 whiteicon">Connectez-vous avec nous sur les réseaux sociaux !</h6>
                 </div>
                 <!-- Grid column -->
 
@@ -91,11 +91,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <div class="col-md-6 col-lg-7 text-center text-md-right">
 
                     <!-- Facebook -->
-                    <a class="fb-ic"> <i class="fa fa-facebook white-text mr-4"> </i> </a>
+                    <a class="fb-ic" href="#"> <i class="fa fa-facebook whiteicon mr-4"> </i> </a>
                     <!-- Twitter -->
-                    <a class="tw-ic"> <i class="fa fa-twitter white-text mr-4"> </i> </a>
+                    <a class="tw-ic" href="#"> <i class="fa fa-twitter whiteicon mr-4"> </i> </a>
                     <!--Instagram-->
-                    <a class="ins-ic"> <i class="fa fa-instagram white-text"> </i> </a>
+                    <a class="ins-ic" href="#"> <i class="fa fa-instagram whiteicon mr-4"> </i> </a>
 
                 </div>
                 <!-- Grid column -->
@@ -117,7 +117,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 <!-- Content -->
                 <h6 class="text-uppercase font-weight-bold">NextDrop</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>Votre fournisseur de Sneakers & Streetwear rares et limités.</p>
 
             </div>
             <!-- Grid column -->
