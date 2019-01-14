@@ -117,7 +117,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 <!-- Content -->
                 <h6 class="text-uppercase font-weight-bold">NextDrop</h6>
-                <p>Votre fournisseur de Sneakers & Streetwear rares et limités.</p>
+                <p>Votre fournisseur d'articles de Streetwear rares.</p>
 
             </div>
             <!-- Grid column -->
