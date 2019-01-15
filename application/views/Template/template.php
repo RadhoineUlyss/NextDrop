@@ -199,7 +199,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3 sec_footer">© 2019 Copyright: <a href="https://nextdrop.local"> NextDrop.fr</a>
+    <div class="footer-copyright text-center py-3 sec_footer">© 2019 Copyright: <a href="<?php echo base_url('') ?>"> NextDrop.fr</a>
     </div>
     <!-- Copyright -->
 
