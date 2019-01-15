@@ -43,7 +43,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body>
 <header>
     <!-- LA BARRE DE NAVIGATION DEBUT -->
-    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+    <nav class="navbar navbar-expand-sm justify-content-center">
         <div class="d-flex flex-row-reverse">
             <form class="form-inline md-form form-sm mt-0">
                 <span onclick="DisplaySearchBar()"><i id="searchicon" class="fa fa-search fa-lg" aria-hidden="true"></i></span>
