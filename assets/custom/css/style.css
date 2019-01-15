@@ -86,10 +86,8 @@ input:focus {
 .sec_footer{
     background-color: #cccccc;
 }
-#social{
-    text-align: center;
-    padding-top:1%;
-    padding-bottom:1%;
+.footerSecText{
+    font-size: 0.8em;
 }
 .modal-login:first-child {		
     color: #636363;
