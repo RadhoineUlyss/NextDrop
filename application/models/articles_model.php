@@ -4,17 +4,17 @@
 
 class articles_model extends CI_Model
 {
-    public function getArticles($id=null)
+    public function getArticles($type=null)
     {
-        if($id !=null) {
+        if($type !=null) {
             return $this->db->select("*")
-                ->where("Type_id", $id)
-                ->get("article", 50)
+                ->where("type", $type)
+                ->get("view_article_taille", 50)
                 ->result();
         }
         else{
             return $this->db->select("*")
-                ->get("article", 50)
+                ->get("view_article_taille", 50)
                 ->result();
         }
     }
