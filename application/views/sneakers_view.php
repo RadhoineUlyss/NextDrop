@@ -2,22 +2,23 @@
 
 <p>La liste :</p>
 
-<!--<?php
-    var_dump($sneakers);
-?>-->
+<?php
+var_dump($sneakers);
+?>
 
-<div id="galerie" class="container">
-    <div class="x1y1"></div>
-    <div class="x2y1"></div>
-    <div class="x3y1"></div>
-    <div class="x4y1"></div>
+<div id="galerie" class="row text-center text-lg-left">
 
-    <div class="x1y2"></div>
-    <div class="x2y2"></div>
-    <div class="x3y2"></div>
+    <?php foreach ($sneakers as $sneack) { ?>
+        <div class="articlebox col-lg-3 col-md-4 col-xs-6" style="border:1px solid black;margin: 10px;">
+            <p style="text-align: center"><?php echo $sneack->nom ?> </p>
+            <div>
+                <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+                <span>43</span>
+                <span>43</span>
+            </div>
 
-    <div class="x1y3"></div>
-    <div class="x2y3"></div>
-    <div class="x3y3"></div>
-    <div class="x4y3"></div>
+        </div>
+    <?php } ?>
 </div>
+
+<br>
