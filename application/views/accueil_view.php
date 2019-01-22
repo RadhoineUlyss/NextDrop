@@ -8,13 +8,16 @@
     <!-- The slideshow -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png" alt="First">
+            <img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png" alt="First slide : Sneakers Of The Week">
         </div>
         <div class="carousel-item">
-            <img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png" alt="Second">
+            <img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png" alt="Second slide : Catégorie Sneakers">
         </div>
         <div class="carousel-item">
-            <img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png" alt="Third">
+            <img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png" alt="Third slide : Catégorie Streetwear">
+        </div>
+        <div class="carousel-item">
+            <img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png" alt="Fourth slide : Catégorie Accessoires">
         </div>
     </div>
     <!-- Left and right controls -->
@@ -24,4 +27,9 @@
     <a class="carousel-control-next" href="#demo" data-slide="next">
         <span class="carousel-control-next-icon"></span>
     </a>
+</div>
+<div id="catepics">
+    <a href="<?php echo base_url('/sneakers') ?>"><img src="<?php echo base_url(); ?>assets/img/cate_sneakers.jpg"></a>
+    <a href=""><img src="<?php echo base_url(); ?>assets/img/cate_streetwear.jpg"></a>
+    <a href=""><img src="<?php echo base_url(); ?>assets/img/cate_accessoires.jpg"></a>
 </div>
