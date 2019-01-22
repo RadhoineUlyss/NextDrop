@@ -14,6 +14,25 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Font -->
     <link type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,700"/>
+    <!-- FavIcon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="<?php echo base_url(); ?>assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?php echo base_url(); ?>assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?php echo base_url(); ?>assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url(); ?>assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?php echo base_url(); ?>assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?php echo base_url(); ?>assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?php echo base_url(); ?>assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo base_url(); ?>assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo base_url(); ?>assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="<?php echo base_url(); ?>assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo base_url(); ?>assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?php echo base_url(); ?>assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo base_url(); ?>assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="<?php echo base_url(); ?>assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
     <?php
     if ($style != '') {
         echo "<link rel=\"stylesheet\" href=" . base_url() . "assets/custom/css/" . $style . ".css>";
@@ -24,7 +43,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body>
 <header>
     <!-- LA BARRE DE NAVIGATION DEBUT -->
-    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+    <nav class="navbar navbar-expand-sm justify-content-center">
         <div class="d-flex flex-row-reverse">
             <form class="form-inline md-form form-sm mt-0">
                 <span onclick="DisplaySearchBar()"><i id="searchicon" class="fa fa-search fa-lg" aria-hidden="true"></i></span>
@@ -75,7 +94,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark prem_footer">
 
-    <div style="background-color: #6351ce;">
+    <div style="background-color: #2F2F2F;">
         <div class="container">
 
             <!-- Grid row-->
@@ -83,7 +102,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 <!-- Grid column -->
                 <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                    <h6 class="mb-0">Connectez-vous avec nous sur les réseaux sociaux !</h6>
+                    <h6 class="mb-0 whiteicon">Connectez-vous avec nous sur les réseaux sociaux !</h6>
                 </div>
                 <!-- Grid column -->
 
@@ -91,15 +110,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <div class="col-md-6 col-lg-7 text-center text-md-right">
 
                     <!-- Facebook -->
-                    <a class="fb-ic"> <i class="fa fa-facebook white-text mr-4"> </i> </a>
+                    <a class="fb-ic" href="#"> <i class="fa fa-facebook whiteicon mr-4"> </i> </a>
                     <!-- Twitter -->
-                    <a class="tw-ic"> <i class="fa fa-twitter white-text mr-4"> </i> </a>
-                    <!-- Google +-->
-                    <a class="gplus-ic"> <i class="fa fa-google-plus white-text mr-4"> </i> </a>
-                    <!--Linkedin -->
-                    <a class="li-ic"> <i class="fa fa-linkedin white-text mr-4"> </i> </a>
+                    <a class="tw-ic" href="#"> <i class="fa fa-twitter whiteicon mr-4"> </i> </a>
                     <!--Instagram-->
-                    <a class="ins-ic"> <i class="fa fa-instagram white-text"> </i> </a>
+                    <a class="ins-ic" href="#"> <i class="fa fa-instagram whiteicon mr-4"> </i> </a>
 
                 </div>
                 <!-- Grid column -->
@@ -121,8 +136,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 <!-- Content -->
                 <h6 class="text-uppercase font-weight-bold">NextDrop</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>Votre fournisseur d'articles de Streetwear rares.</p>
 
             </div>
             <!-- Grid column -->
@@ -131,19 +145,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
                 <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Nos produits</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <a href="#!">SNEAKERS</a>
+                <h6 class="text-uppercase font-weight-bold">Catégories</h6>
+                <p class="footerSecText">
+                    <a href="<?php echo base_url('/sneakers') ?>">SNEAKERS</a>
                 </p>
-                <p>
-                    <a href="#!">STREET WEARS</a>
+                <p class="footerSecText">
+                    <a href="#!">STREETWEAR</a>
                 </p>
-                <p>
-                    <a href="#!">ACCESSOIRE</a>
-                </p>
-                <p>
-                    <a href="#!">Bootstrap Angular</a>
+                <p class="footerSecText">
+                    <a href="#!">ACCESSOIRES</a>
                 </p>
 
             </div>
@@ -153,15 +163,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
                 <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Useful links</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
+                <h6 class="text-uppercase font-weight-bold">Liens utiles</h6>
+                <p class="footerSecText">
                     <a href="#!">VOTRE COMPTE</a>
                 </p>
-                <p>
-                    <a href="#!">ABOUT US</a>
+                <p class="footerSecText">
+                    <a href="#!">A PROPOS</a>
                 </p>
-                <p>
+                <p class="footerSecText">
                     <a href="#!">CONTACT</a>
                 </p>
 
@@ -173,15 +182,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <i class="fa fa-home mr-3"></i> Aix-En-Provence, PACA 13090, FR</p>
+                    <i class="fa fa-home mr-3"></i> Aix-En-Provence 13090 FR</p>
                 <p>
                     <i class="fa fa-envelope mr-3"></i> hello@nextdrop.com</p>
                 <p>
                     <i class="fa fa-phone mr-3"></i> + 33 11 11 11 11</p>
-                <p>
-                    <i class="fa fa-print mr-3"></i> + 33 11 11 11 11</p>
 
             </div>
             <!-- Grid column -->
@@ -193,7 +199,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3 sec_footer">© 2019 Copyright: <a href="https://nextdrop.local"> NextDrop.fr</a>
+    <div class="footer-copyright text-center py-3 sec_footer">© 2019 Copyright: <a href="<?php echo base_url('') ?>"> NextDrop.fr</a>
     </div>
     <!-- Copyright -->
 

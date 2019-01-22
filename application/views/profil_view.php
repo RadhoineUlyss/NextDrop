@@ -7,31 +7,71 @@
  *
  */
 ?>
-<h1> Page Profil </h1>
+<div id="profilPart1">
+	<div class="col-md-10">
+		<h1>Mon Profil</h1>
+		<hr>
+	</div>
+	<div class="col-md-10">
+		<form method="post" action="" id="info_compte">
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Nom d'utilisateur :</label>
+				<div class="col-8">
+					<p><?php echo $username ?></p>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Email :</label>
+				<div class="col-8">
+					<input type="mail" name="email" placeholder="Votre email" value="<?php echo $email ?>">
+				</div>
+			</div>
+			<div class="form-group row">
+				<div id="alert_cte" class="col-4 col-form-label"></div>
+				<div class="col-8">
+					<button id="acc_cte" type="submit" class="btn btn-dark" disabled>Accepter les modifications</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
 
-<p>Voilà la page profil.</p>
-
-<p>Ici se trouve les infos concernant l'utilisateur connecté, s'il est admin il a plus d'options, etc..</p>
-
-<h3> Informations du compte</h3>
-<form method="post" action="" id="info_compte">
-    <table id="test_array" class="table table-striped">
-        <tr>
-            <th scope="row">Nom d'utilisateur :</th>
-            <td><?php echo $username ?></td>
-        </tr>
-        <tr>
-            <th scope="row">Email :</th>
-            <td><input type="mail" name="email" placeholder="Votre email" value="<?php echo $email ?>"></td>
-        </tr>
-        <tr>
-            <div id="alert_cte"></div>
-            <td>
-                <button id="acc_cte" type="submit" class="btn btn-dark" disabled>Accepter les modifications</button>
-            </td>
-        </tr>
-    </table>
-</form>
+<div id="profilPart2">
+	<div class="col-md-10">
+		<h2>Informations personnelles </h2>
+		<hr>
+	</div>
+	<div class="col-md-10">
+		<form method="post" action="" id="info_pers">
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Nom :</label>
+				<div class="col-8">
+					<input type="text" name="nom" placeholder="Nom" value="<?php echo $nom ?>">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Prénom :</label>
+				<div class="col-8">
+					<input type="text" name="prenom" placeholder="Prénom" value="<?php echo $prenom ?>">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Adresse :</label>
+				<div class="col-8">
+				<?php echo '<input type="text" name="code_postal" placeholder="CP" value="'. $adresse->code_postal . '">' ?>
+					<?php echo '<input type="text" name="ville" placeholder="Ville" value="'. $adresse->ville . '">' ?>
+					<?php echo '<input type="text" name="ligne_adresse" placeholder="Ligne adresse" value="'. $adresse->ligne_adresse . '">' ?>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div id="alert_pers" class="col-4 col-form-label"></div>
+				<div class="col-8">
+					<button id="acc_pers" type="submit" class="btn btn-dark" disabled>Accepter les modifications</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
 
 <?php
 $d = new DateTime($date_inscription);
