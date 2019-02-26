@@ -29,7 +29,7 @@ class Sneakers extends CI_Controller
         $this->session->set_flashdata('current_url', current_url());
         $data['sneakers'] = $this->getProducts(1);
         $page = $this->load->view('sneakers_view', $data, true);
-        $this->dynamic_navbar->verification($page,'','');
+        $this->dynamic_navbar->verification($page,'','sneakers_style');
 
     }
 

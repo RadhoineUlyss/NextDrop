@@ -1,0 +1,43 @@
+.x1y1 {
+    grid-area: x1y1;
+}
+.x2y1 {
+    grid-area: x2y1;
+}
+.x3y1 {
+    grid-area: x3y1;
+}
+.x4y1 {
+    grid-area: x4y1;
+}
+.x1y2 {
+    grid-area: x1y2;
+}
+.x2y2 {
+    grid-area: x2y2;
+}
+.x3y2 {
+    grid-area: x3y2;
+}
+.x1y3 {
+    grid-area: x1y3;
+}
+.x2y3 {
+    grid-area: x2y3;
+}
+.x3y3 {
+    grid-area: x3y3;
+}
+.x4y3 {
+    grid-area: x4y3;
+}
+.container {
+    background-color: darkcyan;
+    display: inline-block;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "x1y1 x2y1 x3y1 x4y1"
+    "x1y2 x2y2 x3y2"
+    "x1y3 x2y3 x3y3 x4y3";
+}
