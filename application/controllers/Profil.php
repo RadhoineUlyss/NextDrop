@@ -29,7 +29,7 @@ class Profil extends CI_Controller
 
         if ($this->session->userdata('login_User')) {
             $this->session->set_flashdata('current_url', current_url());
-            $user = $this->getData();
+            $user    = $this->getData();
             $adresse = $this->getAdresse($this->getId());
             if ($user->superadmin) {
                 $data               = $this->session->userdata('login_User');
@@ -37,7 +37,7 @@ class Profil extends CI_Controller
                 $this->session->set_userdata('login_User', $data);
             }
             $user->adresse = $adresse;
-            $page = $this->load->view('profil_view', $user, true);
+            $page          = $this->load->view('profil_view', $user, true);
             $this->dynamic_navbar->verification($page, 'profil_script', 'profil_style');
         } else {
             redirect($this->session->flashdata('current_url'));
@@ -59,7 +59,8 @@ class Profil extends CI_Controller
         return $this->connection_model->getData($this->session->userdata('login_User')['login']);
     }
 
-    private function getAdresse($id){
+    private function getAdresse($id)
+    {
         $this->load->model('connection_model');
 
         return $this->connection_model->getAdresse($id);
@@ -101,8 +102,8 @@ class Profil extends CI_Controller
         $this->form_validation->set_rules('nom', 'Nom', 'trim|required');
 
         if ($this->form_validation->run()) {
-            $data = $this->input->post(array('nom', 'prenom'));
-            $add = $this->input->post(array('code_postal', 'ville','ligne_adresse'));
+            $data = $this->input->post(['nom', 'prenom']);
+            $add  = $this->input->post(['code_postal', 'ville', 'ligne_adresse']);
             $this->connection_model->modifyPers($this->session->userdata('login_User')['login'], $data, $add);
             $json = [
                 'status' => 'succes'
@@ -115,6 +116,14 @@ class Profil extends CI_Controller
 
         header("Content-type:application/json");
         echo json_encode($json);
+    }
+
+    public function recuperationPassword()
+    {
+
+        $this->session->set_flashdata('message_error', 'Email inexistant, veuillez réessayer !');
+        redirect('home');
+
     }
 
 }
