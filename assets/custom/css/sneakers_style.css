@@ -1,43 +1,67 @@
-.x1y1 {
-    grid-area: x1y1;
+.containersneak {
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    height:1000px ;
+    width:100% ;
+    flex-wrap:wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-top: 2%;
 }
-.x2y1 {
-    grid-area: x2y1;
+
+#galerie{
+    margin-top: 4%;
 }
-.x3y1 {
-    grid-area: x3y1;
+
+.container{
+    width:100%;
+    margin: 0;
+    padding:0;
+    max-width: none;
 }
-.x4y1 {
-    grid-area: x4y1;
+
+.menuDiv{
+    background-color: #000;
+    margin: auto;
+    width: 25%;
+    height:100%;
+    border: 2px solid #000;
 }
-.x1y2 {
-    grid-area: x1y2;
+
+.itemDiv{
+    background-color: #fff;
+    margin: auto;
+    width: 25%;
+    height:100%;
+    border: 2px solid #000;
 }
-.x2y2 {
-    grid-area: x2y2;
+
+.videoDiv{
+    background-color: #fff;
+    margin: auto;
+    width: 50%;
+    height:100%;
+    border: 2px solid #000;
 }
-.x3y2 {
-    grid-area: x3y2;
+
+.firstRow{
+    display: flex;
+    flex-direction: row;
+    height:333px ;
+    width:100% ;
 }
-.x1y3 {
-    grid-area: x1y3;
+
+.vidRow{
+    display: flex;
+    flex-direction: row;
+    height:333px ;
+    width:100% ;
 }
-.x2y3 {
-    grid-area: x2y3;
-}
-.x3y3 {
-    grid-area: x3y3;
-}
-.x4y3 {
-    grid-area: x4y3;
-}
-.container {
-    background-color: darkcyan;
-    display: inline-block;
-    grid-template-columns: 50px 50px 50px 50px;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "x1y1 x2y1 x3y1 x4y1"
-    "x1y2 x2y2 x3y2"
-    "x1y3 x2y3 x3y3 x4y3";
+
+.baseRow{
+    display: flex;
+    flex-direction: row;
+    height:333px ;
+    width:100% ;
 }
