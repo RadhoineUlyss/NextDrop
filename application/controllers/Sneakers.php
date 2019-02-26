@@ -33,7 +33,7 @@ class Sneakers extends CI_Controller
 
     }
 
-    public function getProducts($id)
+    public function getProducts($id=null)
     {
         return $this->articles_model->getArticles($id);
     }
