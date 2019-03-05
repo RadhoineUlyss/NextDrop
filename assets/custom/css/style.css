@@ -167,3 +167,11 @@ input:focus {
 a:-webkit-any-link{
     text-decoration:none !important;
 }
+
+.fix{
+    margin-right: 0px !important;
+}
+
+.mgleft{
+    margin-left: 4%;
+}

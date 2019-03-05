@@ -100,11 +100,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <div class="container">
 
             <!-- Grid row-->
-            <div class="row py-4 d-flex align-items-center">
+            <div class="row py-4 d-flex align-items-center fix">
 
                 <!-- Grid column -->
                 <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                    <h6 class="mb-0 whiteicon">Connectez-vous avec nous sur les réseaux sociaux !</h6>
+                    <h6 class="mb-0 whiteicon mgleft">Connectez-vous avec nous sur les réseaux sociaux !</h6>
                 </div>
                 <!-- Grid column -->
 
@@ -131,7 +131,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <div class="container text-center text-md-left mt-5">
 
         <!-- Grid row -->
-        <div class="row mt-3">
+        <div class="row mt-3 fix">
 
             <!-- Grid column -->
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
