@@ -43,13 +43,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body>
 <header>
     <!-- LA BARRE DE NAVIGATION DEBUT -->
+    <script>let base_url ="<?php echo base_url() ?>"</script>
     <nav class="navbar navbar-expand-sm justify-content-center">
         <div class="d-flex flex-row-reverse">
-            <form class="form-inline md-form form-sm mt-0">
-                <span onclick="DisplaySearchBar()"><i id="searchicon" class="fa fa-search fa-lg" aria-hidden="true"></i></span>
-                <input id="searchbar" class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
-            </form>
+            <?php echo form_open('','class="form-inline md-form form-sm mt-0"') ?>
+                <span onclick="DisplaySearchBar()"><i id="searchicon" class="fa fa-search fa-lg" ></i></span>
+                <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
+            <?php echo form_close() ?>
         </div>
+        <div id="listeItemSearch" style="display: none;"></div>
         <div class="navbar-header">
             <a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/Logo_nextdrop_noir.png"></a>
         </div>
@@ -210,7 +212,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Bootstrap JS-->
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/custom/js/display_searchbar.js"></script>
+<script src="<?php echo base_url(); ?>assets/custom/js/display_searchbar.js">
+</script><script src="<?php echo base_url(); ?>assets/custom/js/async_research.js"></script>
+
 <?php
 if ($script != '') {
     echo "<script src=\"" . base_url() . "assets/custom/js/" . $script . ".js\"></script>";

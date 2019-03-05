@@ -3,7 +3,7 @@
 <p>La liste :</p>
 
 <?php
-var_dump($sneakers);
+#var_dump($sneakers);
 ?>
 
 <div id="galerie" class="row text-center text-lg-left">

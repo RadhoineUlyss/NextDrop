@@ -34,4 +34,13 @@ class articles_model extends CI_Model
         }
         return $array;
     }
+
+    public function getArticlesByName($name){
+        return $this->db->select("*")
+                ->from("view_article_taille")
+                ->like("nom", $name)
+                ->group_by("nom")
+                ->get()
+                ->result();
+    }
 }
