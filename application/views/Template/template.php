@@ -24,7 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="apple-touch-icon" sizes="144x144" href="<?php echo base_url(); ?>assets/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="<?php echo base_url(); ?>assets/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo base_url(); ?>assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="<?php echo base_url(); ?>assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="<?php echo base_url(); ?>assets/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo base_url(); ?>assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="<?php echo base_url(); ?>assets/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/favicon-16x16.png">
@@ -32,7 +32,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?php echo base_url(); ?>assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    
+
     <?php
     if ($style != '') {
         echo "<link rel=\"stylesheet\" href=" . base_url() . "assets/custom/css/" . $style . ".css>";
@@ -81,6 +81,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
         echo '<div class="alert alert-success" id="success-alert">
                 <button type="button" class="close" data-dismiss="alert">x</button>
                 <strong>' . $this->session->flashdata('message') . '</strong>
+                </div>';
+    }
+    if ($this->session->flashdata('message_error')) {
+        echo '<div class="alert alert-warning" id="success-alert">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>' . $this->session->flashdata('message_error') . '</strong>
                 </div>';
     }
     ?>

@@ -75,19 +75,46 @@
 
 <?php
 $d = new DateTime($date_inscription);
-echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>"
-?>
+echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
 
-<?php if ($this->getController()->isAdmin()) {
+<h3>Informations personnelles</h3>
+<form method="post" action="" id="info_pers">
+    <table class="table table-striped">
+        <tr>
+            <th scope="row">Nom :</th>
+            <td><input type="text" name="nom" placeholder="Nom" value="<?php echo $nom ?>"></td>
+        </tr>
+        <tr>
+            <th scope="row">Prénom :</th>
+            <td><input type="text" name="prenom" placeholder="Prénom" value="<?php echo $prenom ?>"></td>
+        </tr>
+        <tr>
+            <th scope="row">Adresse :</th>
+            <td><?php echo '<input type="text" name="code_postal" placeholder="CP" value="' . $adresse->code_postal . '">' ?>
+                <?php echo '<input type="text" name="ville" placeholder="Ville" value="' . $adresse->ville . '">' ?>
+                <?php echo '<input type="text" name="ligne_adresse" placeholder="Ligne adresse" value="' . $adresse->ligne_adresse . '">' ?></td>
+
+        </tr>
+        <tr>
+            <div id="alert_pers"></div>
+            <td>
+                <button id="acc_pers" type="submit" class="btn btn-dark" disabled>Accepter les modifications</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<?php
+if ($this->getController()->isAdmin()) {
     echo '<h4 style="color:red;">Vous avez un compte administrateur</h4>';
-} ?>
+}
+?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
 
 	$(document).ready(function (e) {
-
 		initialise();
-		
+
         /*$('#info_pers').on('input change', function() {
 
          if (($("#info_compte :input[name='email']").val() != email)) {
@@ -174,9 +201,8 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>"
 		});
 	});
 
-	function initialise()
-{
-    var email = $("#info_compte :input[name='email']").val();
+	function initialise() {
+		var email = $("#info_compte :input[name='email']").val();
 
 		$('#info_compte').on('input change', function () {
 
@@ -189,7 +215,7 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>"
 			}
 		});
 
-		var $form = $('#info_pers');
+		var $form        = $('#info_pers');
 		var initialState = $form.serialize();
 
 		$("#info_pers").on('input change', function () {
@@ -200,7 +226,7 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>"
 				$('#acc_pers').attr('disabled', true);
 			}
 		});
-}
+	}
 
 
 </script>
