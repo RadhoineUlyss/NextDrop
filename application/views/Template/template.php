@@ -47,7 +47,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <nav class="navbar navbar-expand-sm justify-content-center">
         <div class="d-flex flex-row-reverse">
             <?php echo form_open('','class="form-inline md-form form-sm mt-0"') ?>
-                <span onclick="DisplaySearchBar()"><i id="searchicon" class="fa fa-search fa-lg" ></i></span>
+                <span><i id="searchicon" class="fa fa-search fa-lg" ></i></span>
                 <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
             <?php echo form_close() ?>
         </div>
@@ -66,11 +66,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </nav>
     <div id="navigation">
         <ul>
-            <li><a href="<?php echo base_url('/sneakers') ?>">SNEAKERS</a></li>
-            <li><a href="">STREETWEAR</a></li>
-            <li><a href="">ACCESSOIRES</a></li>
-            <li><a href="">ABOUT US</a></li>
-            <li><a href="">CONTACT</a></li>
+            <li><a href="<?php echo base_url('/sneakers') ?>" class="">SNEAKERS</a></li>
+            <li><a href="" class="">STREETWEAR</a></li>
+            <li><a href="" class="">ACCESSOIRES</a></li>
+            <li><a href="" class="">ABOUT US</a></li>
+            <li><a href="" class="">CONTACT</a></li>
         </ul>
     </div>
     <!-- LA BARRE DE NAVIGATION FIN -->
