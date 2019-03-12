@@ -1,5 +1,6 @@
 <!--<?php
-    var_dump($sneakers);
+   // var_dump($sneakers);
+   //<?php echo $sneakers[0]->nom ?>
 ?>-->
 <br id="brspec">
 <div id="galerie">
@@ -7,6 +8,7 @@
         <div class="firstRow">
             <div class="menuDiv">
                 <h4>FILTRER :</h4>
+                <?php var_dump($sneakers) ?>
                 <ul>
                     <li>- NIKE</li>
                     <li>- ADIDAS</li>

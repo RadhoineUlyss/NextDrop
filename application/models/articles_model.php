@@ -43,4 +43,13 @@ class articles_model extends CI_Model
                 ->get()
                 ->result();
     }
+
+    public function getArticlesByRef($ref){
+        return $this->db->select("*")
+            ->from("view_article_complet")
+            ->like("reference", $ref)
+            ->group_by("reference")
+            ->get()
+            ->row();
+    }
 }
