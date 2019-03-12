@@ -17,6 +17,11 @@
     justify-content: center;
 }
 
+#galerie{
+    display: inline-block;
+    width: 100%;
+}
+
 .menuDiv{
     background-color: #000;
     margin: auto;
