@@ -27,14 +27,14 @@ class Sneakers extends CI_Controller
         //$page = $this->load->view('accueil_view', '', true);
         // On affiche notre page avec le template
         $this->session->set_flashdata('current_url', current_url());
-        $data['sneakers'] = $this->getProducts(1);
+        $data['sneakers'] = $this->getProducts('Sneakers');
         $page = $this->load->view('sneakers_view', $data, true);
         $this->dynamic_navbar->verification($page,'','sneakers_style');
 
     }
 
-    public function getProducts($id)
+    public function getProducts($id=null)
     {
-        return $this->articles_model->getArticles();
+        return $this->articles_model->getArticles($id);
     }
 }

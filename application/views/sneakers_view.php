@@ -1,6 +1,30 @@
-<!--<?php
-    var_dump($sneakers);
-?>-->
+<h1> Les derniers articles</h1>
+
+<p>La liste :</p>
+
+<?php
+#var_dump($sneakers);
+?>
+
+<div id="galerie" class="row text-center text-lg-left">
+
+    <?php foreach ($sneakers as $sneack) { ?>
+        <div class="articlebox col-lg-3 col-md-4 col-xs-6" style="border:1px solid black;margin: 10px;">
+            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            <p style="text-align: left"><?php echo $sneack->nom ?> </p>
+            <div>
+                <?php echo  $sneack->prix ?>
+                <?php /*for($i =0; $i< count($sneack->tailles);$i++) {
+                    if($sneack->tailles[$i] != 0)
+                        echo '<span>'.$sneack->tailles{$i}.'</span>';
+                    else
+                        echo '<span>Unique</span>';
+                }*/?>
+            </div>
+        </div>
+    <?php } ?>
+</div>
+
 <br id="brspec">
 <div id="galerie">
     <div class="containersneak">
@@ -30,3 +54,4 @@
         </div>
     </div>
 </div>
+<br>

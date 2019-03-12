@@ -11,12 +11,8 @@
 
 #galerie{
 }
-
-.container{
-    width:100%;
-    margin: 0;
-    padding:0;
-    max-width: none;
+.x3y1 {
+    grid-area: x3y1;
 }
 
 .menuDiv{
