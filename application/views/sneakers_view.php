@@ -1,12 +1,8 @@
-<h1> Les derniers articles</h1>
-
-<p>La liste :</p>
-
 <?php
 #var_dump($sneakers);
 ?>
 
-<div id="galerie" class="row text-center text-lg-left">
+<!-- <div id="galerie" class="row text-center text-lg-left">
 
     <?php foreach ($sneakers as $sneack) { ?>
         <div class="articlebox col-lg-3 col-md-4 col-xs-6" style="border:1px solid black;margin: 10px;">
@@ -23,7 +19,7 @@
             </div>
         </div>
     <?php } ?>
-</div>
+</div> -->
 
 <br id="brspec">
 <div id="galerie">
