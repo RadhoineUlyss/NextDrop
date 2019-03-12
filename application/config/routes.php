@@ -55,4 +55,5 @@ $route['404_override']         = '';
 $route['translate_uri_dashes'] = false;
 $route['galerie']              = 'galerie';
 $route['profil']               = 'profil';
-$route['sneakers']             = 'sneakers';
+$route['sneakers']               = 'sneakers';
+$route['recherche']               = 'Recherche/rechercheAjax';

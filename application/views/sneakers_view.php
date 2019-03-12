@@ -1,24 +1,32 @@
-<h1> Les derniers articles</h1>
-
-<p>La liste :</p>
-
-<?php
-var_dump($sneakers);
-?>
-
-<div id="galerie" class="row text-center text-lg-left">
-
-    <?php foreach ($sneakers as $sneack) { ?>
-        <div class="articlebox col-lg-3 col-md-4 col-xs-6" style="border:1px solid black;margin: 10px;">
-            <p style="text-align: center"><?php echo $sneack->nom ?> </p>
-            <div>
-                <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-                <span>43</span>
-                <span>43</span>
+<!--<?php
+    var_dump($sneakers);
+?>-->
+<br id="brspec">
+<div id="galerie">
+    <div class="containersneak">
+        <div class="firstRow">
+            <div class="menuDiv">
+                <h4>FILTRER :</h4>
+                <ul>
+                    <li>- NIKE</li>
+                    <li>- ADIDAS</li>
+                    <li>- YEEZY</li>
+                </ul>
             </div>
-
+            <div class="itemDiv"></div>
+            <div class="itemDiv"></div>
+            <div class="itemDiv"></div>
         </div>
-    <?php } ?>
+        <div class="vidRow">
+            <div class="itemDiv"></div>
+            <div class="itemDiv"></div>
+            <div class="videoDiv"></div>
+        </div>
+        <div class="baseRow">
+            <div class="itemDiv"></div>
+            <div class="itemDiv"></div>
+            <div class="itemDiv"></div>
+            <div class="itemDiv"></div>
+        </div>
+    </div>
 </div>
-
-<br>

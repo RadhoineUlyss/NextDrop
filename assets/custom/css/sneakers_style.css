@@ -1,0 +1,85 @@
+.containersneak {
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    height:75vw;
+    flex-wrap:wrap;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+#galerie{
+}
+
+.container{
+    width:100%;
+    margin: 0;
+    padding:0;
+    max-width: none;
+}
+
+.menuDiv{
+    background-color: #000;
+    margin: auto;
+    width: 25%;
+    height:100%;
+    border-right: 2px solid #69738c;
+    border-bottom: 2px solid #69738c;
+}
+
+.menuDiv h4{
+    margin-top: 1em;
+    margin-left: 1em;
+    color: #fff;
+}
+
+.menuDiv ul{
+    list-style:none;
+    color: #fff;
+}
+
+.itemDiv{
+    background-color: #fff;
+    margin: auto;
+    width: 25%;
+    height:100%;
+    border-right: 2px solid #69738c;
+    border-bottom: 2px solid #69738c;
+}
+
+.videoDiv{
+    background-color: #fff;
+    margin: auto;
+    width: 50%;
+    height:100%;
+    border-right: 2px solid #69738c;
+    border-bottom: 2px solid #69738c;
+}
+
+.firstRow{
+    display: flex;
+    flex-direction: row;
+    height:25vw;
+    width:100% ;
+    border-top: 2px solid #69738c;
+}
+
+.vidRow{
+    display: flex;
+    flex-direction: row;
+    height:25vw ;
+    width:100% ;
+}
+
+.baseRow{
+    display: flex;
+    flex-direction: row;
+    height:25vw ;
+    width:100% ;
+}
+
+#brspec{
+    display: block;
+    margin: 2px 0;
+}
