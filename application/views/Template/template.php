@@ -24,7 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="apple-touch-icon" sizes="144x144" href="<?php echo base_url(); ?>assets/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="<?php echo base_url(); ?>assets/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo base_url(); ?>assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="<?php echo base_url(); ?>assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="<?php echo base_url(); ?>assets/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo base_url(); ?>assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="<?php echo base_url(); ?>assets/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/favicon-16x16.png">
@@ -32,7 +32,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?php echo base_url(); ?>assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    
+
     <?php
     if ($style != '') {
         echo "<link rel=\"stylesheet\" href=" . base_url() . "assets/custom/css/" . $style . ".css>";
@@ -47,7 +47,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <nav class="navbar navbar-expand-sm justify-content-center">
         <div class="d-flex flex-row-reverse">
             <?php echo form_open('','class="form-inline md-form form-sm mt-0"') ?>
-                <span onclick="DisplaySearchBar()"><i id="searchicon" class="fa fa-search fa-lg" ></i></span>
+                <span><i id="searchicon" class="fa fa-search fa-lg" ></i></span>
                 <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
             <?php echo form_close() ?>
         </div>
@@ -66,11 +66,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </nav>
     <div id="navigation">
         <ul>
-            <li><a href="<?php echo base_url('/sneakers') ?>">SNEAKERS</a></li>
-            <li><a href="">STREETWEAR</a></li>
-            <li><a href="">ACCESSOIRES</a></li>
-            <li><a href="">ABOUT US</a></li>
-            <li><a href="">CONTACT</a></li>
+            <li><a href="<?php echo base_url('/sneakers') ?>" class="">SNEAKERS</a></li>
+            <li><a href="" class="">STREETWEAR</a></li>
+            <li><a href="" class="">ACCESSOIRES</a></li>
+            <li><a href="" class="">ABOUT US</a></li>
+            <li><a href="" class="">CONTACT</a></li>
         </ul>
     </div>
     <!-- LA BARRE DE NAVIGATION FIN -->
@@ -81,6 +81,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
         echo '<div class="alert alert-success" id="success-alert">
                 <button type="button" class="close" data-dismiss="alert">x</button>
                 <strong>' . $this->session->flashdata('message') . '</strong>
+                </div>';
+    }
+    if ($this->session->flashdata('message_error')) {
+        echo '<div class="alert alert-warning" id="success-alert">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>' . $this->session->flashdata('message_error') . '</strong>
                 </div>';
     }
     ?>
