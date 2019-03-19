@@ -170,3 +170,16 @@ a:-webkit-any-link{
 .mgleft{
     margin-left: 4%;
 }
+
+#pagenotfound{
+    height: 25vw;
+}
+
+#pagenotfound h1{
+    text-align: center;
+    margin-top: 10vw;
+}
+
+#pagenotfound a h2{
+    text-align: center;
+}
