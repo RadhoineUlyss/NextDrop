@@ -8,7 +8,7 @@
         <div class="articlebox col-lg-3 col-md-4 col-xs-6" style="border:1px solid black;margin: 10px;">
             <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
             <p style="text-align: left"><?php echo $sneack->nom ?> </p>
-            <div>
+        <div>
                 <?php echo  $sneack->prix ?>
                 <?php /*for($i =0; $i< count($sneack->tailles);$i++) {
                     if($sneack->tailles[$i] != 0)
