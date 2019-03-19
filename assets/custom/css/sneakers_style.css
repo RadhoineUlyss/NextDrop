@@ -53,6 +53,29 @@
     border-bottom: 2px solid #69738c;
 }
 
+.itemDiv img{
+    width: 22vw;
+    margin-top: 1.3vw;
+    margin-left: 1.3vw;
+    margin-bottom: 0.8vw;
+}
+
+.SneakName{
+    color: #000;
+    font-size: 1.5vw;
+    text-decoration: none;
+    margin-left: 2vw;
+}
+
+.SneakPrice{
+    color: #000;
+    font-size: 1.4vw;
+    text-decoration: none;
+    margin-left: 2vw;
+    margin-top: 2vw;
+}
+
+
 .videoDiv{
     background-color: #fff;
     margin: auto;
