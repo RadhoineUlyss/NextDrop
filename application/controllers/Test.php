@@ -100,7 +100,7 @@ class Test extends CI_Controller
                 ];
 
                 $this->session->set_userdata('login_User', $data);
-                $this->session->set_flashdata('message', 'Connexion réussie. Bonjour ' . $this->input->post('username') . ' !');
+                $this->session->set_flashdata('message', 'Bonjour ' . $this->input->post('username') . ' !');
             } else {
                 $this->session->set_flashdata('error_ident', 'Mauvais identifiants');
             }

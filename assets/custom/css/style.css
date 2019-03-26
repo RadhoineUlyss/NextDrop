@@ -3,13 +3,15 @@ html {
     min-height: 100%;
 }
 #logotop{
-    max-height:90px;
+    height:12vh;
+    position: relative;
+
 }
 .navbar-header {
-    float: left;
     text-align: center;
     width: 100%;
-    margin-right:4%;
+    margin-left:auto;
+    margin-right: auto;
 }
 #searchicon{
     margin-right:5%;
@@ -182,4 +184,30 @@ a:-webkit-any-link{
 
 #pagenotfound a h2{
     text-align: center;
+}
+
+#success-alert{
+    z-index:10 ;
+    position: absolute;
+    height: 4vw;
+    width: 20vw;
+    margin-left: 75vw;
+    background-color: rgba(255, 255, 255, 1);
+    border-top: 3px solid rgba(100, 240, 100, 0.6);
+    border-right: 3px solid rgba(100, 240, 100, 0.6);
+    border-left: 3px solid rgba(100, 240, 100, 0.6);
+    border-bottom: 3px solid rgba(100, 240, 100, 0.6);
+}
+
+#error-alert{
+    z-index:10 ;
+    position: absolute;
+    height: 4vw;
+    width: 20vw;
+    margin-left: 75vw;
+    background-color: rgba(255, 255, 255, 1);
+    border-top: 3px solid rgba(250, 76, 76, 0.6);
+    border-right: 3px solid rgba(250, 76, 76, 0.6);
+    border-left: 3px solid rgba(250, 76, 76, 0.6);
+    border-bottom: 3px solid rgba(250, 76, 76, 0.6);
 }

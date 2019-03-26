@@ -84,7 +84,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </div>';
     }
     if ($this->session->flashdata('message_error')) {
-        echo '<div class="alert alert-warning" id="success-alert">
+        echo '<div class="alert alert-warning" id="error-alert">
                 <button type="button" class="close" data-dismiss="alert">x</button>
                 <strong>' . $this->session->flashdata('message_error') . '</strong>
                 </div>';
