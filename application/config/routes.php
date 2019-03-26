@@ -55,5 +55,6 @@ $route['translate_uri_dashes'] = false;
 $route['galerie']              = 'galerie';
 $route['profil']               = 'profil';
 $route['sneakers']             = 'sneakers';
+$route['accessoires']             = 'accessoires';
 $route['recherche']            = 'recherche/rechercheAjax';
 $route['sneakers/(:any)']      = 'sneaker/get_one/$1';
