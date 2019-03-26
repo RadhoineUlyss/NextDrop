@@ -27,7 +27,7 @@ class Sneaker extends CI_Controller
             redirect('_404');
 
             $this->load->model('articles_model');
-        $data['article'] = $this->articles_model->getArticlesByRef($id);
+        $data['article'] = $this->articles_model->getArticleByRef($id);
         if($data['article'] == null)
             redirect('_404');
         $this->session->set_flashdata('current_url', current_url());

@@ -18,25 +18,35 @@
                     <li>- YEEZY</li>
                 </ul>
             </div>
-            <div class="itemDiv">
-                <img src="http://placehold.it/400x300" alt="NomSneaker">
-                <span class="SneakName">Test</span><br>
-                <span class="SneakPrice">230€</span>
-            </div>
-            <div class="itemDiv"></div>
-            <div class="itemDiv"></div>
-        </div>
-        <div class="vidRow">
-            <div class="itemDiv"></div>
-            <div class="itemDiv"></div>
-            <div class="videoDiv"></div>
-        </div>
-        <div class="baseRow">
-            <div class="itemDiv"></div>
-            <div class="itemDiv"></div>
-            <div class="itemDiv"></div>
-            <div class="itemDiv"></div>
-        </div>
+            <?php
+                $max = count($sneakers);
+                foreach ($sneakers as $i=>$sneack) { ?>
+                            <?php if($i < 3){ ?>
+                                <div class="itemDiv">
+                                    <img src="http://placehold.it/400x300" alt="NomSneaker">
+                                    <span class="SneakName"><?php echo $sneack->nom ?></span><br>
+                                    <span class="SneakPrice"><?php echo $sneack->prix ?></span>
+                                </div>
+                            <?php if($i ==2)
+                                echo "</div><div class=\"vidRow\">"; ?>
+                            <?php } else if($i < 5){ ?>
+                                <div class="itemDiv">
+                                    <img src="http://placehold.it/400x300" alt="NomSneaker">
+                                    <span class="SneakName"><?php echo $sneack->nom ?></span><br>
+                                    <span class="SneakPrice"><?php echo $sneack->prix ?></span>
+                                </div>
+                            <?php if($i == 4)
+                                echo "<div class=\"videoDiv\"></div></div><div class=\"baseRow\">"; ?>
+                            <?php } else if($i < 9){ ?>
+                                <div class="itemDiv">
+                                    <img src="http://placehold.it/400x300" alt="NomSneaker">
+                                    <span class="SneakName"><?php echo $sneack->nom ?></span><br>
+                                    <span class="SneakPrice"><?php echo $sneack->prix ?></span>
+                                </div>
+                            <?php  if($i ==8)
+                                echo "</div>"; }  } ?>
+
+
     </div>
 </div>
 <br>
