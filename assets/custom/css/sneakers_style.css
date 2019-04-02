@@ -1,3 +1,11 @@
+.container{
+    margin:0 !important;
+    border:0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+}
+
 .containersneak {
     background-color: #000;
     display: flex;
@@ -10,13 +18,8 @@
 }
 
 #galerie{
-}
-
-.container{
-    width:100%;
-    margin: 0;
-    padding:0;
-    max-width: none;
+    display: inline-block;
+    width: 100%;
 }
 
 .menuDiv{
@@ -32,11 +35,13 @@
     margin-top: 1em;
     margin-left: 1em;
     color: #fff;
+    font-size: 1.2vw;
 }
 
 .menuDiv ul{
     list-style:none;
     color: #fff;
+    font-size: 1.2vw;
 }
 
 .itemDiv{
@@ -47,6 +52,29 @@
     border-right: 2px solid #69738c;
     border-bottom: 2px solid #69738c;
 }
+
+.itemDiv img{
+    width: 22vw;
+    margin-top: 1.3vw;
+    margin-left: 1.3vw;
+    margin-bottom: 0.8vw;
+}
+
+.SneakName{
+    color: #000;
+    font-size: 1.5vw;
+    text-decoration: none;
+    margin-left: 2vw;
+}
+
+.SneakPrice{
+    color: #000;
+    font-size: 1.4vw;
+    text-decoration: none;
+    margin-left: 2vw;
+    margin-top: 2vw;
+}
+
 
 .videoDiv{
     background-color: #fff;
