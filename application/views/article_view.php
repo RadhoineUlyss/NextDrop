@@ -14,6 +14,7 @@
 <p><?php echo $article->nom ?></p>
 <p><?php echo $article->marque ?></p>
 <p><?php echo $article->reference ?></p>
+<p><?php echo $article->date_sortie ?></p>
 <p><?php echo $article->type ?></p>
 <p><?php echo $article->prix ?></p>
 <p><?php echo $article->taille ?></p>

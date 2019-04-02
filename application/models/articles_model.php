@@ -11,6 +11,7 @@ class articles_model extends CI_Model
             $array = $this->db->select("*")
                 ->where("type", $type)
                 ->group_by("nom")
+                ->order_by("date_sortie","desc")
                 ->get("view_article_taille", 50)
                 ->result();
         }
@@ -44,7 +45,7 @@ class articles_model extends CI_Model
                 ->result();
     }
 
-    public function getArticlesByRef($ref){
+    public function getArticleByRef($ref){
         return $this->db->select("*")
             ->from("view_article_complet")
             ->like("reference", $ref)
