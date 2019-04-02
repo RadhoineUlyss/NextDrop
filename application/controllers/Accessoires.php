@@ -29,7 +29,7 @@ class Accessoires extends CI_Controller
         $this->session->set_flashdata('current_url', current_url());
         $data['accessoires'] = $this->getProducts('Accessoire');
         $page = $this->load->view('accessoires_view', $data, true);
-        $this->dynamic_navbar->verification($page,'','sneakers_style');
+        $this->dynamic_navbar->verification($page,'','accessoires_style');
 
     }
 
