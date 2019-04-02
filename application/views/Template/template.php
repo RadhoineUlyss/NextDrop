@@ -81,10 +81,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <div id="navigation">
         <ul>
             <li><a href="<?php echo base_url('/sneakers') ?>" class="">SNEAKERS</a></li>
-            <li><a href="" class="">STREETWEAR</a></li>
+            <li><a href="<?php echo base_url('/streetwear') ?>" class="">STREETWEAR</a></li>
             <li><a href="<?php echo base_url('/accessoires') ?>" class="">ACCESSOIRES</a></li>
-            <li><a href="" class="">ABOUT US</a></li>
-            <li><a href="" class="">CONTACT</a></li>
+            <li><a href="<?php echo base_url('/aboutus') ?>" class="">ABOUT US</a></li>
+            <li><a href="<?php echo base_url('/contact') ?>" class="">CONTACT</a></li>
         </ul>
     </div>
     <!-- LA BARRE DE NAVIGATION FIN -->

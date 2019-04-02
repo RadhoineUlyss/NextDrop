@@ -189,7 +189,7 @@ a:-webkit-any-link{
 
 #success-alert{
     color:#000;
-    font-size: 2vw;
+    font-size: 1.8vw;
     z-index:10 ;
     position: absolute;
     height: 4vw;
