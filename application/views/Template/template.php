@@ -48,7 +48,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <div class="d-flex flex-row-reverse">
             <?php echo form_open('','class="form-inline md-form form-sm mt-0"') ?>
                 <span><i id="searchicon" class="fa fa-search fa-lg" ></i></span>
-                <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
+                <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Recherche" aria-label="Search">
             <?php echo form_close() ?>
         </div>
         <div id="listeItemSearch" style="display: none;"></div>
