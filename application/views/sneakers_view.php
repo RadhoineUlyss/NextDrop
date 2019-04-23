@@ -5,7 +5,7 @@
     </div>
 <?php } ?> -->
 
-
+<?php echo base_url("http://placehold.it/400x300"); ?>
 <br id="brspec">
 <div id="galerie">
     <div class="containersneak">
@@ -24,7 +24,7 @@
                             <?php if($i < 3){ ?>
                                 <div class="itemDiv">
                                     <a href="<?php echo base_url('/sneakers/').$sneack->reference ?>">
-                                    <img src="http://placehold.it/400x300" alt="NomSneaker">
+                                    <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomSneaker">
                                     <span class="SneakName"><?php echo $sneack->nom ?></span><br>
                                     <span class="SneakPrice"><?php echo $sneack->prix ?></span>
                                     </a>
@@ -34,7 +34,7 @@
                             <?php } else if($i < 5){ ?>
                                 <div class="itemDiv">
                                     <a href="<?php echo base_url('/sneakers/').$sneack->reference ?>">
-                                    <img src="http://placehold.it/400x300" alt="NomSneaker">
+                                    <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomSneaker">
                                     <span class="SneakName"><?php echo $sneack->nom ?></span><br>
                                     <span class="SneakPrice"><?php echo $sneack->prix ?></span>
                                     </a>
@@ -44,7 +44,7 @@
                             <?php } else if($i < 9){ ?>
                                 <div class="itemDiv">
                                     <a href="<?php echo base_url('/sneakers/').$sneack->reference ?>">
-                                    <img src="http://placehold.it/400x300" alt="NomSneaker">
+                                    <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomSneaker">
                                     <span class="SneakName"><?php echo $sneack->nom ?></span><br>
                                     <span class="SneakPrice"><?php echo $sneack->prix ?></span>
                                     </a>
