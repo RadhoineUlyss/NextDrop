@@ -48,7 +48,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <div class="d-flex flex-row-reverse">
             <?php echo form_open('','class="form-inline md-form form-sm mt-0"') ?>
                 <span><i id="searchicon" class="fa fa-search fa-lg" ></i></span>
-                <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
+                <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Recherche" aria-label="Search">
             <?php echo form_close() ?>
         </div>
         <div id="listeItemSearch" style="display: none;"></div>
@@ -64,18 +64,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </div>
         </div>
     </nav>
-    <div id="navigation">
-        <ul>
-            <li><a href="<?php echo base_url('/sneakers') ?>" class="">SNEAKERS</a></li>
-            <li><a href="" class="">STREETWEAR</a></li>
-            <li><a href="<?php echo base_url('/accessoires') ?>" class="">ACCESSOIRES</a></li>
-            <li><a href="" class="">ABOUT US</a></li>
-            <li><a href="" class="">CONTACT</a></li>
-        </ul>
-    </div>
-    <!-- LA BARRE DE NAVIGATION FIN -->
-</header>
-<div>
     <?php
     if ($this->session->flashdata('message')) {
         echo '<div class="alert alert-success" id="success-alert">
@@ -90,6 +78,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </div>';
     }
     ?>
+    <div id="navigation">
+        <ul>
+            <li><a href="<?php echo base_url('/sneakers') ?>" class="">SNEAKERS</a></li>
+            <li><a href="<?php echo base_url('/streetwear') ?>" class="">STREETWEAR</a></li>
+            <li><a href="<?php echo base_url('/accessoires') ?>" class="">ACCESSOIRES</a></li>
+            <li><a href="<?php echo base_url('/aboutus') ?>" class="">ABOUT US</a></li>
+            <li><a href="<?php echo base_url('/contact') ?>" class="">CONTACT</a></li>
+        </ul>
+    </div>
+    <!-- LA BARRE DE NAVIGATION FIN -->
+</header>
+<div>
     <?php
     if (isset($formulaire)) {
         echo $formulaire;
