@@ -239,3 +239,7 @@ a:-webkit-any-link{
     from {left: 60vw}
     to {left: 80vw}
 }
+
+.fab{
+    color:#000;
+}

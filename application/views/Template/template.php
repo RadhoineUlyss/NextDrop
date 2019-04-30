@@ -119,11 +119,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <div class="col-md-6 col-lg-7 text-center text-md-right">
 
                     <!-- Facebook -->
-                    <a class="fb-ic" href="#"> <i class="fa fa-facebook whiteicon mr-4"> </i> </a>
+                    <a class="fb-ic" href="#"> <i class="fab fa-facebook"> </i> </a>
                     <!-- Twitter -->
-                    <a class="tw-ic" href="#"> <i class="fa fa-twitter whiteicon mr-4"> </i> </a>
+                    <a class="tw-ic" href="#"> <i class="fab fa-twitter"></i> </i> </a>
                     <!--Instagram-->
-                    <a class="ins-ic" href="#"> <i class="fa fa-instagram whiteicon mr-4"> </i> </a>
+                    <a class="ins-ic" href="#"> <i class="fab fa-instagram"> </i> </a>
 
                 </div>
                 <!-- Grid column -->

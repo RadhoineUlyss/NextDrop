@@ -5,7 +5,7 @@
     </div>
 <?php } ?> -->
 
-<?php echo base_url("http://placehold.it/400x300"); ?>
+<!--<?php echo base_url("http://placehold.it/400x300"); ?>-->
 <br id="brspec">
 <div id="galerie">
     <div class="containersneak">
@@ -26,7 +26,7 @@
                                     <a href="<?php echo base_url('/sneakers/').$sneack->reference ?>">
                                     <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomSneaker">
                                     <span class="SneakName"><?php echo $sneack->nom ?></span><br>
-                                    <span class="SneakPrice"><?php echo $sneack->prix ?></span>
+                                    <span class="SneakPrice"><?php echo $sneack->prix ?>€</span>
                                     </a>
                                 </div>
                             <?php if($i ==2)
@@ -36,7 +36,7 @@
                                     <a href="<?php echo base_url('/sneakers/').$sneack->reference ?>">
                                     <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomSneaker">
                                     <span class="SneakName"><?php echo $sneack->nom ?></span><br>
-                                    <span class="SneakPrice"><?php echo $sneack->prix ?></span>
+                                    <span class="SneakPrice"><?php echo $sneack->prix ?>€</span>
                                     </a>
                                 </div>
                             <?php if($i == 4)
@@ -46,7 +46,7 @@
                                     <a href="<?php echo base_url('/sneakers/').$sneack->reference ?>">
                                     <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomSneaker">
                                     <span class="SneakName"><?php echo $sneack->nom ?></span><br>
-                                    <span class="SneakPrice"><?php echo $sneack->prix ?></span>
+                                    <span class="SneakPrice"><?php echo $sneack->prix ?>€</span>
                                     </a>
                                 </div>
                             <?php  if($i ==8)
