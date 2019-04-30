@@ -17,25 +17,31 @@
     justify-content: center;
 }
 
-.itemDiv{
-    background-color: #fff;
-    display: inline-block;
-    margin: 0;
-    width: 19.5vw;
-    height:19.5vw;
-    border: 2px solid #000;
+.itemDiv img{
+    margin-left:5%;
+    margin-top:5%;
+    width: 90%;
+    height: 70%;
 }
 
-.itemDiv:after{
-    height:25vw;
+.itemDiv span:first-child{
+    margin-left: 20%;
+    margin-top:2%;
 }
 
-.itemDiv:hover{
+.itemDiv span:last-child{
+    margin-left: 30%;
+    margin-top:2%;
+}
+
+
+
+/*.itemDiv:hover{
     animation-name: tailleDisplay;
     animation-duration: 0.6s;
     animation-delay: 0s;
     animation-timing-function: ease-in-out;
-}
+}*/
 
 .vidDiv{
     background-color: #fff;

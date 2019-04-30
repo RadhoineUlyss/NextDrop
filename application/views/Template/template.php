@@ -12,6 +12,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/custom/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Font -->
     <link type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,700"/>
     <!-- FavIcon -->
@@ -47,7 +48,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <nav class="navbar navbar-expand-sm justify-content-center">
         <div class="d-flex flex-row-reverse">
             <?php echo form_open('','class="form-inline md-form form-sm mt-0"') ?>
-                <span><i id="searchicon" class="fa fa-search fa-lg" ></i></span>
+                <span><i class="fas fa-search"></i></span>
                 <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Recherche" aria-label="Search">
             <?php echo form_close() ?>
         </div>
@@ -218,7 +219,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Bootstrap JS-->
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/custom/js/display_searchbar.js">
 </script><script src="<?php echo base_url(); ?>assets/custom/js/async_research.js"></script>
 
 <?php

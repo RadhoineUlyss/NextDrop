@@ -55,14 +55,20 @@
 </div>
 !-->
 <div class="row">
-    <div class="col-sm-6 col-lg-3" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-6 col-lg-3" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-6 col-lg-3" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-6 col-lg-3" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-6 col-lg-3" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-6 col-lg-3" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-12 col-lg-6" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8></div>
-    <div class="col-sm-6 col-lg-3" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-6 col-lg-3" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">
+    <a href="<?php echo base_url('/accessoires/').$accessoire->reference ?>">
+            <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomAccessoire"><br>
+            <span class="AccessoireName"><?php echo $accessoire->nom ?></span>
+            <span class="AccessoirePrice"><?php echo $accessoire->prix ?></span>
+        </a>
+    </div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
+    <div class="col-sm-12 col-lg-6" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
 </div>
 <br>
