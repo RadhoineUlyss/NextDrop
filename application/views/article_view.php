@@ -19,4 +19,13 @@
 <p><?php echo $article->prix ?></p>
 <p><?php echo $article->taille ?></p>
 <p><?php echo $article->couleur ?></p>
-
+<?php
+var_dump($article);
+/*for($i =0; $i< count($article->tailles);$i++) {
+                    if($article->tailles[$i] != 0)
+                        echo '<span>'.$article->tailles{$i}.'</span>';
+                    else
+                        echo '<span>Unique</span>';
+                }*/?>
+<button type="button" class="btn btn-outline-dark">Acheter</button>
+<br>

@@ -46,11 +46,23 @@ class articles_model extends CI_Model
     }
 
     public function getArticleByRef($ref){
-        return $this->db->select("*")
+        $array = $this->db->select("*")
             ->from("view_article_complet")
             ->like("reference", $ref)
             ->group_by("reference")
             ->get()
             ->row();
+
+        $array2 =[];
+        $query = $this->db->select("distinct(taille)")
+            ->where("reference", $array->reference)
+            ->get("view_article_taille", 50);
+
+        foreach ($query->result() as $row){
+            array_push($array2,$row->taille);
+        }
+        $array->tailles = $array2;
+        return $array;
+
     }
 }
