@@ -220,6 +220,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- Bootstrap JS-->
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
 </script><script src="<?php echo base_url(); ?>assets/custom/js/async_research.js"></script>
+<!--<script type="text/javascript">
+    var divHeight; var obj = document.getElementBy('videoDiv'); if(obj.offsetHeight) {divHeight=obj.offsetHeight;} else if(obj.style.pixelHeight){divHeight=obj.style.pixelHeight;}
+</script>-->
 
 <?php
 if ($script != '') {

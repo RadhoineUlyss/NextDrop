@@ -39,8 +39,20 @@
                                     <span class="SneakPrice"><?php echo $sneack->prix ?>€</span>
                                     </a>
                                 </div>
-                            <?php if($i == 4)
-                                echo "<div class=\"videoDiv\"></div></div><div class=\"baseRow\">"; ?>
+                            <?php if($i == 4) ?>
+                                <div class="itemDiv">
+                                    <a href="<?php echo base_url('/sneakers/').$sneack->reference ?>">
+                                    <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomSneaker">
+                                    <span class="SneakName"><?php echo $sneack->nom ?></span><br>
+                                    <span class="SneakPrice"><?php echo $sneack->prix ?>€</span>
+                                    </a>
+                                </div>
+                                <div class="videoDiv">
+                                    <video width="700" height="300" autoplay loop>
+                                        <source src="<?php echo base_url(); ?>assets/airmax90.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <?php echo "</div><div class=\"baseRow\">"; ?>
                             <?php } else if($i < 9){ ?>
                                 <div class="itemDiv">
                                     <a href="<?php echo base_url('/sneakers/').$sneack->reference ?>">
