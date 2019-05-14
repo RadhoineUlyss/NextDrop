@@ -220,9 +220,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- Bootstrap JS-->
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
 </script><script src="<?php echo base_url(); ?>assets/custom/js/async_research.js"></script>
-<!--<script type="text/javascript">
-    var divHeight; var obj = document.getElementBy('videoDiv'); if(obj.offsetHeight) {divHeight=obj.offsetHeight;} else if(obj.style.pixelHeight){divHeight=obj.style.pixelHeight;}
-</script>-->
+<script type="text/javascript">
+    var divHeight;
+    var divWidth;
+    var obj = document.getElementsByClassName('videoDiv')[0];
+    console.log(obj);
+    if(obj.offsetHeight) {divHeight=obj.offsetHeight;} else if(obj.style.pixelHeight){divHeight=obj.style.pixelHeight;}
+    if(obj.offsetWidth) {divWidth=obj.offsetWidth;} else if(obj.style.pixelWidth){divWidth=obj.style.pixelWidth;}
+    var allvideos = document.getElementsByTagName("video")[0];
+    allvideos.style.height = divHeight + "px";
+    allvideos.style.width = divWidth + "px";
+    var allvideosdos = document.getElementsByTagName("video")[1];
+    allvideosdos.style.height = divHeight - 4 + "px";
+    allvideosdos.style.width = divWidth + "px";
+</script>
 
 <?php
 if ($script != '') {
