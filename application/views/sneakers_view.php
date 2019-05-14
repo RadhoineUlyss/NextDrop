@@ -48,7 +48,7 @@
                                     </a>
                                 </div>
                                 <div class="videoDiv">
-                                    <video width="700" height="300" autoplay loop>
+                                    <video autoplay loop>
                                         <source src="<?php echo base_url(); ?>assets/airmax90.mp4" type="video/mp4">
                                     </video>
                                 </div>
