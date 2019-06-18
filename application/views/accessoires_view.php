@@ -22,53 +22,34 @@
 </div> -->
 
 <br id="brspec">
-<!--
-<div id="galerie">
-    <div class="container_access">
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="vidDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="vidDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-        <div class="itemDiv"></div>
-
-
-    </div>
-</div>
-!-->
 <div class="row">
-    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">
-    <a href="<?php echo base_url('/accessoires/').$accessoire->reference ?>">
-            <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomAccessoire"><br>
-            <span class="AccessoireName"><?php echo $accessoire->nom ?></span>
-            <span class="AccessoirePrice"><?php echo $accessoire->prix ?></span>
-        </a>
+    <div class="col-sm-6 col-lg-3 menuDiv" style="border: 1px solid black;">
+        <h4>FILTRER :</h4>
+        <ul>
+            <li>- NIKE</li>
+            <li>- ADIDAS</li>
+            <li>- YEEZY</li>
+        </ul>
     </div>
-    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-12 col-lg-6" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
-    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black; width: 300px;height: 300px">col-sm-8</div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black;">
+    <a href="<?php echo base_url('/accessoires/').$accessoire->reference ?>">
+        <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomAccessoire"><br>
+        <span class="AccessoireName"><?php echo $accessoire->nom ?></span>
+        <span class="AccessoirePrice"><?php echo $accessoire->prix ?></span>
+    </a>
+    </div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black;"></div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black;"></div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black;"></div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black;"></div>
+    <div class="col-sm-12 col-lg-6 videoDiv" style="border: 1px solid black;">
+        <video autoplay loop>
+            <source src="<?php echo base_url(); ?>assets/airmax90.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black;"></div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black;"></div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black;"></div>
+    <div class="col-sm-6 col-lg-3 itemDiv" style="border: 1px solid black;"></div>
 </div>
 <br>
