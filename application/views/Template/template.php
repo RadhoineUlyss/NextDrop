@@ -86,6 +86,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <li><a href="<?php echo base_url('/accessoires') ?>" class="">ACCESSOIRES</a></li>
             <li><a href="<?php echo base_url('/aboutus') ?>" class="">ABOUT US</a></li>
             <li><a href="<?php echo base_url('/contact') ?>" class="">CONTACT</a></li>
+            <?php
+            if ($this->getController()->isAdmin()) {
+                echo  "<li><a href=\"".base_url('/admin')."\" class='adm'>ADMIN</a></li>";
+            }
+            ?>
         </ul>
     </div>
     <!-- LA BARRE DE NAVIGATION FIN -->
@@ -97,6 +102,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     }
     ?>
     <!-- LA VUE DYNAMIQUE COMMENCE ICI -->
+    <br/>
     <div class="container"><?php echo $page; ?></div>
 </div>
 

@@ -16,7 +16,7 @@ $("#searchbar").on("click keyup", function(){
             $('#listeItemSearch').empty();
             if(data.length != 0) {
                 data.forEach(function(item){
-                    $('#listeItemSearch').append("<div>" + item.nom + "<div/>");
+                    $('#listeItemSearch').append("<div><a href='"+base_url+ item.type.toLowerCase() + "/" +item.reference +"'>" + item.nom + "</a><div/>");
                 })
             }
             else{
