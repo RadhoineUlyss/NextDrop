@@ -12,7 +12,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/custom/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Font -->
     <link type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,700"/>
     <!-- FavIcon -->
@@ -44,12 +43,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body>
 <header>
     <!-- LA BARRE DE NAVIGATION DEBUT -->
-    <script>let base_url ="<?php echo base_url() ?>"</script>
+    <script>let base_url = "<?php echo base_url() ?>"</script>
     <nav class="navbar navbar-expand-sm justify-content-center">
         <div class="d-flex flex-row-reverse">
-            <?php echo form_open('','class="form-inline md-form form-sm mt-0"') ?>
-                <span><i class="fas fa-search"></i></span>
-                <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Recherche" aria-label="Search">
+            <?php echo form_open('', 'class="form-inline md-form form-sm mt-0"') ?>
+            <span><i id="searchicon" class="fa fa-search fa-lg"></i></span> <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Recherche" aria-label="Search">
             <?php echo form_close() ?>
         </div>
         <div id="listeItemSearch" style="display: none;"></div>
@@ -86,11 +84,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <li><a href="<?php echo base_url('/accessoires') ?>" class="">ACCESSOIRES</a></li>
             <li><a href="<?php echo base_url('/aboutus') ?>" class="">ABOUT US</a></li>
             <li><a href="<?php echo base_url('/contact') ?>" class="">CONTACT</a></li>
-            <?php
-            if ($this->getController()->isAdmin()) {
-                echo  "<li><a href=\"".base_url('/admin')."\" class='adm'>ADMIN</a></li>";
-            }
-            ?>
         </ul>
     </div>
     <!-- LA BARRE DE NAVIGATION FIN -->
@@ -102,7 +95,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
     }
     ?>
     <!-- LA VUE DYNAMIQUE COMMENCE ICI -->
-    <br/>
     <div class="container"><?php echo $page; ?></div>
 </div>
 
@@ -125,11 +117,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <div class="col-md-6 col-lg-7 text-center text-md-right">
 
                     <!-- Facebook -->
-                    <a class="fb-ic" href="#"> <i class="fab fa-facebook"> </i> </a>
+                    <a class="fb-ic" href="#"> <i class="fa fa-facebook whiteicon mr-4"> </i> </a>
                     <!-- Twitter -->
-                    <a class="tw-ic" href="#"> <i class="fab fa-twitter"></i> </i> </a>
+                    <a class="tw-ic" href="#"> <i class="fa fa-twitter whiteicon mr-4"> </i> </a>
                     <!--Instagram-->
-                    <a class="ins-ic" href="#"> <i class="fab fa-instagram"> </i> </a>
+                    <a class="ins-ic" href="#"> <i class="fa fa-instagram whiteicon mr-4"> </i> </a>
 
                 </div>
                 <!-- Grid column -->
@@ -193,6 +185,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <!-- Grid column -->
 
             <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">RGPD</h6>
+                <p class="footerSecText">
+                    <a href="/cgu">CONDITIONS GÉNÉRALES DE VENTE</a>
+                </p>
+                <p class="footerSecText">
+                    <a href="/cgu#mentions-legales">MENTIONS LÉGALES</a>
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                 <!-- Links -->
@@ -225,21 +232,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Bootstrap JS-->
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-</script><script src="<?php echo base_url(); ?>assets/custom/js/async_research.js"></script>
-<script type="text/javascript"> 
-    <!--TODO: Faire en sorte que la fonction se relance -->
-    var divHeight;
-    var divWidth;
-    var obj = document.getElementsByClassName('videoDiv')[0];
-    if(obj.offsetHeight) {divHeight=obj.offsetHeight;} else if(obj.style.pixelHeight){divHeight=obj.style.pixelHeight;}
-    if(obj.offsetWidth) {divWidth=obj.offsetWidth;} else if(obj.style.pixelWidth){divWidth=obj.style.pixelWidth;}
-    var allvideos = document.getElementsByTagName("video")[0];
-    allvideos.style.height = divHeight * 0.97 + "px";
-    allvideos.style.width = divWidth * 0.97 + "px";
-    // var allvideosdos = document.getElementsByTagName("video")[1];
-    // allvideosdos.style.height = divHeight + "px";
-    // allvideosdos.style.width = divWidth + "px";
+<script src="<?php echo base_url(); ?>assets/custom/js/display_searchbar.js">
 </script>
+<script src="<?php echo base_url(); ?>assets/custom/js/async_research.js"></script>
 
 <?php
 if ($script != '') {
