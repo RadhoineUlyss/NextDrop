@@ -30,4 +30,12 @@ class Accueil extends CI_Controller
         $this->dynamic_navbar->verification($page, '', 'accueil_style');
 
     }
+
+    public function cgu()
+    {
+        $this->session->set_flashdata('current_url', current_url());
+        $page = $this->load->view('cgu', '', true);
+        $this->dynamic_navbar->verification($page, '', 'accueil_style');
+
+    }
 }

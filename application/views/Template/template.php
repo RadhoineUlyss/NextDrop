@@ -43,12 +43,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body>
 <header>
     <!-- LA BARRE DE NAVIGATION DEBUT -->
-    <script>let base_url ="<?php echo base_url() ?>"</script>
+    <script>let base_url = "<?php echo base_url() ?>"</script>
     <nav class="navbar navbar-expand-sm justify-content-center">
         <div class="d-flex flex-row-reverse">
-            <?php echo form_open('','class="form-inline md-form form-sm mt-0"') ?>
-                <span><i id="searchicon" class="fa fa-search fa-lg" ></i></span>
-                <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Recherche" aria-label="Search">
+            <?php echo form_open('', 'class="form-inline md-form form-sm mt-0"') ?>
+            <span><i id="searchicon" class="fa fa-search fa-lg"></i></span> <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Recherche" aria-label="Search">
             <?php echo form_close() ?>
         </div>
         <div id="listeItemSearch" style="display: none;"></div>
@@ -186,6 +185,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <!-- Grid column -->
 
             <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">RGPD</h6>
+                <p class="footerSecText">
+                    <a href="/cgu">CONDITIONS GÉNÉRALES DE VENTE</a>
+                </p>
+                <p class="footerSecText">
+                    <a href="/cgu#mentions-legales">MENTIONS LÉGALES</a>
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                 <!-- Links -->
@@ -219,7 +233,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- Bootstrap JS-->
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/custom/js/display_searchbar.js">
-</script><script src="<?php echo base_url(); ?>assets/custom/js/async_research.js"></script>
+</script>
+<script src="<?php echo base_url(); ?>assets/custom/js/async_research.js"></script>
 
 <?php
 if ($script != '') {
