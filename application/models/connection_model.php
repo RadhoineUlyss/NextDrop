@@ -7,7 +7,7 @@ class connection_model extends CI_Model
     public function check_id($pseudo, $pass)
     {
         $this->db->where('username', $pseudo);
-        $this->db->where('password', sha1($pass));
+        $this->db->where('password', $pass);
         $q = $this->db->get('membres');
         if ($q->num_rows() > 0) {
             $this->db->where('username', $pseudo);

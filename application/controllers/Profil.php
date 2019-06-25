@@ -30,6 +30,7 @@ class Profil extends CI_Controller
         if ($this->session->userdata('login_User')) {
             $this->session->set_flashdata('current_url', current_url());
             $user    = $this->getData();
+            //$user->nom = $this->encrypt->decode($user->nom);
             $adresse = $this->getAdresse($this->getId());
             if ($user->superadmin) {
                 $data               = $this->session->userdata('login_User');
@@ -77,7 +78,6 @@ class Profil extends CI_Controller
 
         if ($this->form_validation->run()) {
             $data = $this->input->post();
-
             $this->connection_model->modifyCte($this->session->userdata('login_User')['login'], $data);
             $json = [
                 'status' => 'succes'
@@ -103,6 +103,8 @@ class Profil extends CI_Controller
 
         if ($this->form_validation->run()) {
             $data = $this->input->post(['nom', 'prenom']);
+            $data['nom'] = $this->encrypt->encode($data['nom']);
+            $data['prenom'] = $this->encrypt->encode($data['prenom']);
             $add  = $this->input->post(['code_postal', 'ville', 'ligne_adresse']);
             $this->connection_model->modifyPers($this->session->userdata('login_User')['login'], $data, $add);
             $json = [

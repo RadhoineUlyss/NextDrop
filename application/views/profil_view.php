@@ -46,13 +46,13 @@
 			<div class="form-group row">
 				<label class="col-4 col-form-label">Nom :</label>
 				<div class="col-8">
-					<input type="text" name="nom" placeholder="Nom" value="<?php echo $nom ?>">
+					<input type="text" name="nom" placeholder="Nom" value="<?php echo $this->getController()->encrypt->decode($nom) ?>">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-4 col-form-label">Prénom :</label>
 				<div class="col-8">
-					<input type="text" name="prenom" placeholder="Prénom" value="<?php echo $prenom ?>">
+					<input type="text" name="prenom" placeholder="Prénom" value="<?php echo $this->getController()->encrypt->decode($prenom) ?>">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -82,11 +82,11 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>" ?>
     <table class="table table-striped">
         <tr>
             <th scope="row">Nom :</th>
-            <td><input type="text" name="nom" placeholder="Nom" value="<?php echo $nom ?>"></td>
+            <td><input type="text" name="nom" placeholder="Nom" value="<?php echo $this->getController()->encrypt->decode($nom) ?>"></td>
         </tr>
         <tr>
             <th scope="row">Prénom :</th>
-            <td><input type="text" name="prenom" placeholder="Prénom" value="<?php echo $prenom ?>"></td>
+            <td><input type="text" name="prenom" placeholder="Prénom" value="<?php echo $this->getController()->encrypt->decode($prenom) ?>"></td>
         </tr>
         <tr>
             <th scope="row">Adresse :</th>

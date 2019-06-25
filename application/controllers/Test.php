@@ -68,11 +68,11 @@ class Test extends CI_Controller
 
         if ($this->form_validation->run()) {
             $data = [
-                'nom'              => $this->input->post('nom'),
-                'prenom'           => $this->input->post('prenom'),
+                'nom'              => $this->encrypt->encode($this->input->post('nom')),
+                'prenom'           => $this->encrypt->encode($this->input->post('prenom')),
                 'email'            => $this->input->post('email'),
                 'username'         => $this->input->post('username'),
-                'password'         => sha1($this->input->post('password')),
+                'password'         => $this->encrypt->encode($this->input->post('password')),
                 'date_inscription' => date("Y-m-d"),
             ];
             $this->inscription_model->signup($data);
@@ -92,7 +92,7 @@ class Test extends CI_Controller
         $this->form_validation->set_rules('password', 'Mot de passe', 'trim|required');
 
         if ($this->form_validation->run()) {
-            if ($this->connection_model->check_id($this->input->post('username'), $this->input->post('password'))) {
+            if ($this->connection_model->check_id($this->input->post('username'), $this->encrypt->decode($this->input->post('password')))) {
 
                 $data = [
                     'login'  => $this->input->post('username'),

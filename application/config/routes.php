@@ -57,6 +57,7 @@ $route['galerie']              = 'galerie';
 $route['profil']               = 'profil';
 $route['sneakers']             = 'sneakers';
 $route['accessoires']          = 'accessoires';
+$route['admin']                = 'admin';
 $route['recherche']            = 'recherche/rechercheAjax';
 $route['sneakers/(:any)']      = 'sneaker/get_one/$1';
 $route['cgu']                  = 'accueil/cgu';
