@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @property dynamic_navbar     $dynamic_navbar               Dynamic navigator Bar Syteme
  * @property CI_Form_validation $form_validation              Form Validation Class
  * @property CI_Input           $input                        Pre-processes global input data for security
- *
+ * @property CI_Encrypt         $encrypt                      Provides two-way keyed encoding using XOR Hashing and Mcrypt
  *
  */
 class CI_Controller
