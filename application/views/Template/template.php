@@ -46,8 +46,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <script>let base_url = "<?php echo base_url() ?>"</script>
     <nav class="navbar navbar-expand-sm justify-content-center">
         <div class="d-flex flex-row-reverse">
-            <?php echo form_open('', 'class="form-inline md-form form-sm mt-0"') ?>
-            <span><i id="searchicon" class="fa fa-search fa-lg"></i></span> <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Recherche" aria-label="Search">
+            <?php echo form_open('','class="form-inline md-form form-sm mt-0"') ?>
+                <span><i class="fas fa-search"></i></span>
+                <input id="searchbar" name="search" class="form-control-sm" type="text" placeholder="Recherche" aria-label="Search">
             <?php echo form_close() ?>
         </div>
         <div id="listeItemSearch" style="display: none;"></div>
@@ -232,9 +233,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Bootstrap JS-->
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/custom/js/display_searchbar.js">
-</script>
+<script src="<?php echo base_url(); ?>assets/custom/js/display_searchbar.js"></script>
 <script src="<?php echo base_url(); ?>assets/custom/js/async_research.js"></script>
+</script><script src="<?php echo base_url(); ?>assets/custom/js/async_research.js"></script>
+<script type="text/javascript"> 
+    <!--TODO: Faire en sorte que la fonction se relance -->
+    var divHeight;
+    var divWidth;
+    var obj = document.getElementsByClassName('videoDiv')[0];
+    if(obj.offsetHeight) {divHeight=obj.offsetHeight;} else if(obj.style.pixelHeight){divHeight=obj.style.pixelHeight;}
+    if(obj.offsetWidth) {divWidth=obj.offsetWidth;} else if(obj.style.pixelWidth){divWidth=obj.style.pixelWidth;}
+    var allvideos = document.getElementsByTagName("video")[0];
+    allvideos.style.height = divHeight * 0.97 + "px";
+    allvideos.style.width = divWidth * 0.97 + "px";
+    // var allvideosdos = document.getElementsByTagName("video")[1];
+    // allvideosdos.style.height = divHeight + "px";
+    // allvideosdos.style.width = divWidth + "px";
+</script>
 
 <?php
 if ($script != '') {
