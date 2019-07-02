@@ -1,0 +1,29 @@
+#ContactMainDiv{
+    padding-top: 4vh;
+}
+
+#ContactMainDiv h1{
+    margin-left: 6vw;
+}
+
+#ContactMainDiv h2{
+    margin-left: 8vw;
+}
+
+#ContactMainDiv button{
+    background-color: #141414;
+    width:20vw;
+    height:10vh;
+    border-radius:10px;
+    color: #fff;
+    font-size: 4vh;
+    margin-left: 40vw;
+    margin-top:8vh;
+    margin-bottom: 12vh;
+}
+
+#ContactMainDiv button:active{
+    background-color: #111111;
+    transform: translateY(2vh);
+    box-shadow: 0 1vh #858585;
+}

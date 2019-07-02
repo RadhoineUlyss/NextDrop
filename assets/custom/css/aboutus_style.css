@@ -1,0 +1,41 @@
+#AboutMainDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#AboutUpperDiv{
+    order: 1;
+    margin: auto;
+    width:100%;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    background-color: #000;
+}
+
+#AboutUpperDiv h1{
+    text-align: center;
+    color:#fff;
+}
+
+#AboutCenterDiv{
+    order: 2;
+    margin: auto;
+    width:100%;
+    padding-top:5vh;
+}
+
+#AboutCenterDiv p{
+    text-align: left;
+    width: 70vw;
+    margin-left: 15vw;
+    line-height: 5vh;
+}
+
+#AboutLowerDiv{
+    order: 3;
+    margin: auto;
+    width:80vw;
+}

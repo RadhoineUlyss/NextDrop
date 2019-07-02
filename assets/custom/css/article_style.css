@@ -1,0 +1,71 @@
+#ArticleBigDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top:4vh;
+}
+
+#ArticleLeftDiv{
+    order: 1;
+    margin: auto;
+    width:50%;
+}
+
+#ArticleLeftDiv img{
+    width: 40vw;
+    margin-left: 8vw;
+}
+
+
+#ArticleRightDiv{
+    order: 2;
+    margin: auto;
+    width:50%;
+    height: 100%;
+    margin-top: 0;
+}
+
+#ArticleRightDiv h3{
+    margin-top:0;
+    margin-left:10vw;
+}
+
+#ArticleRightDiv h2{
+    margin-top:1vh;
+    margin-left:10vw;
+}
+
+#ArticleRightDiv h4{
+    margin-top:6vh;
+    margin-left:10vw;
+    font-size: 1.2em;
+}
+
+#ArticleRightDiv div{
+    margin-top:1vh;
+    margin-left:14vw;
+}
+
+#ArticleRightDiv button{
+    margin-top:8vh;
+    margin-left:10vw;
+}
+
+#ArticleBottomDiv{
+    order: 3;
+    margin: auto;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    width:100%;
+    margin-left: 6vw;
+}
+
+#ArticleBottomDiv h3{
+    margin-bottom:2vh;
+}
+
+#ArticleBottomDiv p{
+    margin-left: 2vw;
+}

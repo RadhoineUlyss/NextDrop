@@ -21,6 +21,8 @@ html {
 #searchbar{
     width: 100%;
     border-radius: 20px;
+    border: 1px solid #aaaaaa;
+    margin-left: 0.4vw;
 }
 #listeItemSearch{
     position: absolute;
@@ -82,8 +84,6 @@ input:focus {
 #navigation ul li a:hover{
     color: #fff;
 }
-#navigation ul li{
-}
 .navactive{
     background-color: #000;
     color: #fff;
@@ -97,6 +97,9 @@ input:focus {
 }
 .prem_footer{
     background-color: #e2e2e2;
+}
+.fab{
+    color:#fff !important;
 }
 .sec_footer{
     background-color: #cccccc;

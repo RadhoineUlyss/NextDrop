@@ -11,13 +11,13 @@
             <img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png" alt="First slide : Sneakers Of The Week">
         </div>
         <div class="carousel-item">
-            <img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png" alt="Second slide : Catégorie Sneakers">
+            <a href="<?php echo base_url('/sneakers') ?>"><img src="<?php echo base_url(); ?>assets/img/sneakers_slide.png" alt="Second slide : Catégorie Sneakers"></a>
         </div>
         <div class="carousel-item">
-            <img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png" alt="Third slide : Catégorie Streetwear">
+            <a href="<?php echo base_url('/streetwear') ?>"><img src="<?php echo base_url(); ?>assets/img/streetwear_slide.png" alt="Third slide : Catégorie Streetwear"></a>
         </div>
         <div class="carousel-item">
-            <img src="<?php echo base_url(); ?>assets/img/snearkersoftheweek.png" alt="Fourth slide : Catégorie Accessoires">
+            <a href="<?php echo base_url('/accessoires') ?>"><img src="<?php echo base_url(); ?>assets/img/accessoires_slide.png" alt="Fourth slide : Catégorie Accessoires"></a>
         </div>
     </div>
     <!-- Left and right controls -->
@@ -30,6 +30,6 @@
 </div>
 <div id="catepics">
     <a href="<?php echo base_url('/sneakers') ?>"><img src="<?php echo base_url(); ?>assets/img/cate_sneakers.jpg"></a>
-    <a href=""><img src="<?php echo base_url(); ?>assets/img/cate_streetwear.jpg"></a>
-    <a href=""><img src="<?php echo base_url(); ?>assets/img/cate_accessoires.jpg"></a>
+    <a href="<?php echo base_url('/streetwear') ?>"><img src="<?php echo base_url(); ?>assets/img/cate_streetwear.jpg"></a>
+    <a href="<?php echo base_url('/accessoires') ?>"><img src="<?php echo base_url(); ?>assets/img/cate_accessoires.jpg"></a>
 </div>

@@ -2,7 +2,7 @@
 
 <p>La liste :</p>
 
-<P> Ici le sneaker et tout ses detaille </P>
+<P> Ici la sneaker et tout ses details </P>
 
 <div id="galerie" class="row text-center text-lg-left">
     <div class="articlebox col-lg-3 col-md-4 col-xs-6">

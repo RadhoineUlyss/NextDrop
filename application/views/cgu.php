@@ -1,4 +1,5 @@
-<section id="Edito">
+<br><h2>Annexe</h2>
+<br><section id="Edito">
     <div class="edito-content CGV">
         <div class="menu">
             <ul class="liste-menu">
@@ -39,7 +40,7 @@
                 </p>
                 <h2 id="mentions-legales">I. LES MENTIONS LEGALES</h2>
                 <p>
-                    <strong>EDITEUR</strong><br><span style="text-decoration: underline;">Monoprix Online</span><br>
+                    <strong>EDITEUR</strong><br><span style="text-decoration: underline;">NextDrop</span><br>
                 </p>
                 <ul>
 
@@ -195,8 +196,7 @@
                     <strong><span style="font-size: 16px;">Commande</span></strong>
                 </p>
                 <p>
-                    Le Client peut passer commande sur le site Internet <a href="http://www.NextDrop.com">www.NextDrop.com</a> ou par téléphone du lundi au vendredi de 8h00 à 20h00 et le samedi de
-                    10h00 à 18h00 au : 01 86 86 50 50.
+                    Le Client peut passer commande sur le site Internet <a href="http://www.NextDrop.com">www.NextDrop.com</a>
                 </p>
                 <p>
                     Le processus de commande est le suivant :
@@ -276,8 +276,8 @@
                     En cas de paiement par carte bancaire, le compte bancaire du Client sera débité lors de l’expédition de la commande.<br>
                 </p>
                 <p>
-                    En cas de paiement par chèque, celui-ci doit être émis par une banque domiciliée en France métropolitaine et libellé à l’ordre de Monoprix Online. Il est à adresser à Monoprix
-                    Online (NextDrop), Service Client, 27-29 rue de Choiseul, 75002 Paris. Le chèque doit être obligatoirement libellé aux nom, prénom et adresse du Client ayant passé la commande sur
+                    En cas de paiement par chèque, celui-ci doit être émis par une banque domiciliée en France métropolitaine et libellé à l’ordre de NextDrop. Il est à adresser à Monoprix
+                    Online (NextDrop), //Adresse de l'entreprise// Le chèque doit être obligatoirement libellé aux nom, prénom et adresse du Client ayant passé la commande sur
                     le Site. A défaut, NextDrop.com se réservera le droit de refuser tout chèque non conforme et annulera la commande. Les articles commandés sont alors réservés 5 jours à compter de
                     la date de commande. Passé ce délai et à défaut de réception du chèque correspondant, NextDrop.com se réserve le droit d’annuler la commande du Client. Le chèque lui sera alors
                     renvoyé dès réception. L’encaissement est réalisé à réception du chèque. <br>
@@ -396,7 +396,7 @@
                     bien.<br>
                 </p>
                 <p>
-                    <span style="text-decoration: underline;">Modèle de formulaire de rétractation</span><br>À l’attention de NextDrop S.A., 27-29 rue de Choiseul 75002 Paris - France :<br>Je/Nous (1)
+                    <span style="text-decoration: underline;">Modèle de formulaire de rétractation</span><br>À l’attention de NextDrop //Adresse de l'entreprise// - France :<br>Je/Nous (1)
                     vous notifie/notifions (1) par la présente ma/notre (1) rétractation du contrat portant sur la vente du bien (1)/pour la prestation de service (1) ci-dessous<br>Commandé le
                     (1)/reçu le (1)<br>Nom du (des) consommateur(s)<br>Adresse du (des) consommateur(s)<br>Signature du (des) consommateur(s) (uniquement en cas de notification du présent formulaire
                     sur papier)<br>Date<br>(1)&nbsp; Biffez la mention inutile.<br>&nbsp;<br><strong><span style="text-decoration: underline;">Retour jusqu’à 100 jours</span></strong><br>
@@ -441,14 +441,14 @@
                 </p>
                 <p>
                     Si le montant de la commande échange du Client est supérieur au montant de sa commande initiale, il pourra payer la différence en ligne par carte bancaire ou PayPal ou par chèque à
-                    l'adresse suivante : Monoprix Online, Service Client, 27-29 rue de Choiseul, 75002 Paris. L'expédition de la commande échange du Client est conditionnée par la validation de ce
+                    l'adresse suivante : NextDrop, //Adresse de l'entreprise// L'expédition de la commande échange du Client est conditionnée par la validation de ce
                     règlement. <br>Si le montant de la commande échange du Client est inférieur au montant de la commande initiale, NextDrop.com lui remboursera la différence : <br>&nbsp;&nbsp;&nbsp;&nbsp;
                     • en 7 jours suivant la réception de son colis par notre entrepôt s'il a déposé son colis dans un Relais Pickup Chronopost en utilisant l'étiquette retour prévue à cet effet, <br>&nbsp;&nbsp;&nbsp;&nbsp;
                     • dans les 5 jours suivant la réception de son colis retour à notre entrepôt s'il nous a renvoyé son colis via Colissimo. <br>Le Client devra conserver la preuve de dépôt du colis
                     qui lui sera remise par La Poste ou le Relais Pickup Chronopost. En cas de perte du colis, aucun déblocage de commande, échange ou remboursement ne pourra être effectué sans cette
                     preuve de dépôt. <br>Le Client dispose d'un délai de 30 jours ouvrés à compter de la date de dépôt de son colis retour afin de formuler toute réclamation relative à son retour.
                     <br>Aucune demande ne sera acceptée à l’issue de ce délai. <br>Le Client devra transmettre sa réclamation par e-mail via le formulaire de contact présent sur la page Service Client
-                    de NextDrop.com ou par courrier postal à envoyer à l'adresse suivante : Monoprix Online (NextDrop), Service Client, 27-29 rue de Choiseul, 75002 Paris.
+                    de NextDrop.com ou par courrier postal à envoyer à l'adresse suivante : NextDrop (NextDrop), //Adresse de l'entreprise//
                 </p>
                 <p>
                     <strong><span style="text-decoration: underline;">Retour du bon produit</span></strong>
@@ -462,12 +462,6 @@
                 <p>
                     De plus, à défaut de restitution du bien objet du droit de rétractation, NextDrop se réservera le droit de déposer plainte pour abus de confiance (article 314-1, alinéa 2 dispose
                     que : « L'abus de confiance est puni de trois ans d'emprisonnement et de 375 000 euros d'amende. »).<br>
-                </p>
-                <h2 id="service-client">Service Client</h2>
-                <p>
-                    Pour toute information ou question, le Service Client de NextDrop.com est joignable :<br>-&nbsp;par téléphone du lundi au vendredi de 8h00 à 20h00 et le samedi de 09h00 à 18h00 au
-                    01 86 86 50 50; <br>-&nbsp;par e-mail via le formulaire de contact ; <br>-&nbsp;par courrier à adresser à NextDrop, Service Client, 27-29 rue de Choiseul, 75002 Paris ; <br>-&nbsp;par
-                    fax à envoyer au 01 70 61 89 90.
                 </p>
                 <h2 id="garantie">Garantie</h2>
                 <p>
@@ -617,7 +611,7 @@
                 <p>
                     Selon les articles L 611-1 et suivants du Code de la consommation, le Client a le droit de recourir gratuitement (sauf éventuels frais d’avocat et d’expertise) à un médiateur de la
                     consommation en vue de la résolution amiable d’un litige l’opposant à NextDrop. <br>NextDrop adhère au Service du Médiateur du e-commerce de la FEVAD (Fédération du e-commerce et
-                    de la vente à distance) dont les coordonnées sont les suivantes : 60 Rue La Boétie – 75008 Paris – <a href="http://www.mediateurfevad.fr">http://www.mediateurfevad.fr</a>. Après
+                    de la vente à distance) dont les coordonnées sont les suivantes : //Adresse de l'entreprise// <a href="http://www.mediateurfevad.fr">http://www.mediateurfevad.fr</a>. Après
                     démarche préalable écrite des consommateurs vis-à-vis de NextDrop, le Service du Médiateur peut être saisi pour tout litige de consommation dont le règlement n’aurait pas abouti.
                     Pour connaître les modalités de saisine du Médiateur, cliquer <a href="http://www.mediateurfevad.fr/index.php/espace-consommateur/">ici</a>.<br>Depuis le 15 février 2016, la
                     plateforme en ligne de règlement amiable des litiges de la Commission européenne est ouverte au public. Tout consommateur qui rencontre un litige avec une entreprise située sur le

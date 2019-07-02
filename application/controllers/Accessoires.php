@@ -27,9 +27,9 @@ class Accessoires extends CI_Controller
         //$page = $this->load->view('accueil_view', '', true);
         // On affiche notre page avec le template
         $this->session->set_flashdata('current_url', current_url());
-        $data['accessoires'] = $this->getProducts('Accessoire');
+        $data['accessoires'] = $this->getProducts('Accessoires');
         $page = $this->load->view('accessoires_view', $data, true);
-        $this->dynamic_navbar->verification($page,'','accessoires_style');
+        $this->dynamic_navbar->verification($page,'','galeries_style');
 
     }
 

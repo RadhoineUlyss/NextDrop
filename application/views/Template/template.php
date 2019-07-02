@@ -14,6 +14,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Font -->
     <link type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,700"/>
+    <!-- Fontawesome Icons -->
+    <script src="https://kit.fontawesome.com/4afa8929d8.js"></script>
     <!-- FavIcon -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php echo base_url(); ?>assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?php echo base_url(); ?>assets/favicon/apple-icon-60x60.png">
@@ -96,7 +98,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     }
     ?>
     <!-- LA VUE DYNAMIQUE COMMENCE ICI -->
-    <div class="container"><?php echo $page; ?></div>
+    <div class="pagecontainer"><?php echo $page; ?></div>
 </div>
 
 <!-- Footer -->
@@ -118,11 +120,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <div class="col-md-6 col-lg-7 text-center text-md-right">
 
                     <!-- Facebook -->
-                    <a class="fb-ic" href="#"> <i class="fa fa-facebook whiteicon mr-4"> </i> </a>
+                    <a class="fb-ic" href="#"> <i class="fab fa-facebook whiteicon mr-4"> </i> </a>
                     <!-- Twitter -->
-                    <a class="tw-ic" href="#"> <i class="fa fa-twitter whiteicon mr-4"> </i> </a>
+                    <a class="tw-ic" href="#"> <i class="fab fa-twitter whiteicon mr-4"> </i> </a>
                     <!--Instagram-->
-                    <a class="ins-ic" href="#"> <i class="fa fa-instagram whiteicon mr-4"> </i> </a>
+                    <a class="ins-ic" href="#"> <i class="fab fa-instagram whiteicon mr-4"> </i> </a>
 
                 </div>
                 <!-- Grid column -->
@@ -140,7 +142,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <div class="row mt-3 fix">
 
             <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 leftspacing">
 
                 <!-- Content -->
                 <h6 class="text-uppercase font-weight-bold">NextDrop</h6>
@@ -244,7 +246,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     if(obj.offsetHeight) {divHeight=obj.offsetHeight;} else if(obj.style.pixelHeight){divHeight=obj.style.pixelHeight;}
     if(obj.offsetWidth) {divWidth=obj.offsetWidth;} else if(obj.style.pixelWidth){divWidth=obj.style.pixelWidth;}
     var allvideos = document.getElementsByTagName("video")[0];
-    allvideos.style.height = divHeight * 0.97 + "px";
+    allvideos.style.height = divHeight * 0.98 + "px";
     allvideos.style.width = divWidth * 0.97 + "px";
     // var allvideosdos = document.getElementsByTagName("video")[1];
     // allvideosdos.style.height = divHeight + "px";

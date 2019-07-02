@@ -1,13 +1,4 @@
-<!-- <?php foreach ($sneakers as $sneack) { ?>
-    <div class="articlebox col-lg-3 col-md-4 col-xs-6" style="border:1px solid black;margin: 10px;">
-        <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-        <p style="text-align: left"><?php echo $sneack->nom ?> </p>
-    </div>
-<?php } ?> -->
-
-<!--<?php echo base_url("http://placehold.it/400x300"); ?>-->
-<br id="brspec">
-<div id="galerie">
+<br><div id="galerie">
     <div class="containersneak">
         <div class="firstRow">
             <div class="menuDiv">
@@ -20,51 +11,52 @@
             </div>
             <?php
                 $max = count($sneakers);
-                foreach ($sneakers as $i=>$sneack) { ?>
-                            <?php if($i < 3){ ?>
-                                <div class="itemDiv">
-                                    <a href="<?php echo base_url('/sneakers/').$sneack->reference ?>">
-                                    <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomSneaker">
-                                    <span class="SneakName"><?php echo $sneack->nom ?></span><br>
-                                    <span class="SneakPrice"><?php echo $sneack->prix ?>€</span>
-                                    </a>
-                                </div>
-                            <?php if($i ==2)
-                                echo "</div><div class=\"vidRow\">"; ?>
-                            <?php } else if($i < 5){ ?>
-                                <div class="itemDiv">
-                                    <a href="<?php echo base_url('/sneakers/').$sneack->reference ?>">
-                                    <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomSneaker">
-                                    <span class="SneakName"><?php echo $sneack->nom ?></span><br>
-                                    <span class="SneakPrice"><?php echo $sneack->prix ?>€</span>
-                                    </a>
-                                </div>
-                            <?php if($i == 4) ?>
-                                <div class="itemDiv">
-                                    <a href="<?php echo base_url('/sneakers/').$sneack->reference ?>">
-                                    <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomSneaker">
-                                    <span class="SneakName"><?php echo $sneack->nom ?></span><br>
-                                    <span class="SneakPrice"><?php echo $sneack->prix ?>€</span>
-                                    </a>
-                                </div>
-                                <div class="videoDiv">
-                                    <video autoplay loop>
-                                        <source src="<?php echo base_url(); ?>assets/airmax90.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <?php echo "</div><div class=\"baseRow\">"; ?>
-                            <?php } else if($i < 9){ ?>
-                                <div class="itemDiv">
-                                    <a href="<?php echo base_url('/sneakers/').$sneack->reference ?>">
-                                    <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="NomSneaker">
-                                    <span class="SneakName"><?php echo $sneack->nom ?></span><br>
-                                    <span class="SneakPrice"><?php echo $sneack->prix ?>€</span>
-                                    </a>
-                                </div>
-                            <?php  if($i ==8)
-                                echo "</div>"; }  } ?>
-
-
+                foreach ($sneakers as $i=>$sneack) {
+                    if($i == 1 || $i == 2 || $i == 3){ ?>
+                        <div class="itemDiv">
+                            <a href="<?php echo base_url('/article/').$sneack->reference ?>">
+                                <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="<?php echo $sneack->nom ?>">
+                                <span class="SneakName"><?php echo $sneack->nom ?></span><br>
+                                <span class="SneakPrice"><?php echo $sneack->prix ?>€</span>
+                            </a>
+                        </div>
+                        <?php
+                            if($i ==3){
+                                echo "</div><div class=\"vidRow\">";
+                            }
+                    } else if($i == 4){ ?>
+                        <div class="itemDiv">
+                            <a href="<?php echo base_url('/article/').$sneack->reference ?>">
+                                <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="<?php echo $sneack->nom ?>">
+                                <span class="SneakName"><?php echo $sneack->nom ?></span><br>
+                                <span class="SneakPrice"><?php echo $sneack->prix ?>€</span>
+                            </a>
+                        </div>
+                    <?php
+                    }else if($i == 5){ ?>
+                        <div class="itemDiv">
+                            <a href="<?php echo base_url('/article/').$sneack->reference ?>">
+                                <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="<?php echo $sneack->nom ?>">
+                                <span class="SneakName"><?php echo $sneack->nom ?></span><br>
+                                <span class="SneakPrice"><?php echo $sneack->prix ?>€</span>
+                            </a>
+                        </div>
+                        <div class="videoDiv">
+                            <video autoplay muted loop>
+                                <source src="<?php echo base_url(); ?>assets/airmax90.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    <?php
+                    }if($i == 6){ echo "</div><div class=\"baseRow\">";}?>
+                    <?php if($i == 6 || $i == 7 || $i == 8 || $i == 9){ ?>
+                        <div class="itemDiv">
+                            <a href="<?php echo base_url('/article/').$sneack->reference ?>">
+                                <img src="<?php echo base_url(); ?>assets/img/articles/SNZ700MV/01.jpg" alt="<?php echo $sneack->nom ?>">
+                                <span class="SneakName"><?php echo $sneack->nom ?></span><br>
+                                <span class="SneakPrice"><?php echo $sneack->prix ?>€</span>
+                            </a>
+                        </div>
+                    <?php  }if($i ==9){
+                        echo "</div>"; }  } ?>
     </div>
 </div>
-<br>

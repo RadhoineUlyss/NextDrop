@@ -59,4 +59,4 @@ $route['sneakers']             = 'sneakers';
 $route['accessoires']          = 'accessoires';
 $route['admin']                = 'admin';
 $route['recherche']            = 'recherche/rechercheAjax';
-$route['sneakers/(:any)']      = 'sneaker/get_one/$1';
+$route['article/(:any)']      = 'article/get_one/$1';
